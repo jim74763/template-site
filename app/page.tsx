@@ -28,7 +28,7 @@ export default function HomePage() {
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           Explore our collection of professionally designed templates, when you work with me this is what you can expect your website to look like.
           Built with <Link href="/software" className="text-primary hover:underline">modern technologies</Link> for optimal performance.
-          View the source code on <Link href="https://github.com" className="text-primary hover:underline inline-flex items-center gap-1">
+          View the source code on <Link href="https://github.com/jim74763/template-site" className="text-primary hover:underline inline-flex items-center gap-1">
             GitHub <ArrowRight className="h-4 w-4" />
           </Link>
         </p>

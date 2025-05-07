@@ -15,6 +15,11 @@ const links = [
     title: "Software",
     href: "/software",
   },
+  {
+    title: "GitHub",
+    href: "https://github.com/jim74763/template-site",
+    isExternal: true,
+  }
 ];
 
 export default function FooterSection() {

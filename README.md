@@ -34,4 +34,4 @@ MIT License
 ## Contact
 For inquiries about custom web development services, please reach out. https://jimvd.com/message
 
-made by jimvanduijsen
+made by Jim van Duijsen
