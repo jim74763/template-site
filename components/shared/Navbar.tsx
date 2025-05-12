@@ -13,6 +13,8 @@ import { usePathname } from "next/navigation";
 import { Link2, Share } from "lucide-react";
 import React, { useState } from "react";
 import { motion } from "motion/react";
+import { ModeToggle } from "../ui/mode-toggle";
+import { Button } from "../ui/button";
 
 export function Navbar() {
   //taking the path name and converting it to a string and making the individual words look better
@@ -78,9 +80,9 @@ export function Navbar() {
                 <Share size={14} /> share
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[150px]">
-                  <button
-                    className="h-9 px-3 py-2 flex items-center gap-1.5 text-sm font-medium bg-transparent hover:bg-accent rounded-md"
+                <ul className="grid">
+                  <Button
+                  variant="ghost"
                     onClick={async (e) => {
                       e.preventDefault();
                       await navigator.share({
@@ -90,10 +92,10 @@ export function Navbar() {
                     }}
                   >
                     <Share size={14} />
-                    <p>Share</p>
-                  </button>
-                  <li
-                    className=" flex select-none rounded-md p-2 no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm font-medium leading-none items-center justify-start"
+                    <span>Share</span>
+                  </Button>
+                  <Button
+                    variant="ghost"
                     onClick={(e) => {
                       e.preventDefault();
                       navigator.clipboard.writeText(window.location.href);
@@ -103,8 +105,8 @@ export function Navbar() {
                       }, 2000);
                     }}
                   >
-                    <Link2 size={22} className="pt-[2px] mr-1" />
-                    <motion.p
+                    <Link2 size={14}/>
+                    <motion.span
                       key={copy ? "copied" : "copy"} // Key changes to trigger animation
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -112,8 +114,8 @@ export function Navbar() {
                       transition={{ duration: 0.5 }}
                     >
                       {copy ? "Copied" : "Copy URL"}
-                    </motion.p>
-                  </li>
+                    </motion.span>
+                  </Button>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -127,9 +129,24 @@ export function Navbar() {
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link
+                  href="https://jimvd.xyz"
+                  className="text-sm font-medium mx-2"
+                >
+                  jimvd.xyz
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <div className="mr-3">
+                <ModeToggle />
+              </div>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
     </header>
   );
-};
+}

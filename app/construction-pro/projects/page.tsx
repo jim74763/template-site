@@ -56,7 +56,7 @@ export default function ProjectsPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-20 bg-primary text-primary-foreground"
+        className="py-20 bg-primary text-primary-foreground dark:bg-primary-foreground dark:text-primary"
       >
         <div className="container mx-auto px-4 text-center">
           <motion.h1

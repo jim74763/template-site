@@ -175,7 +175,7 @@ export default function DentistLandingPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="py-16 md:py-24 bg-primary text-primary-foreground"
+        className="py-16 md:py-24 bg-primary text-primary-foreground dark:bg-primary-foreground dark:text-primary"
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">{pageDetails.ctaTitle}</h2>

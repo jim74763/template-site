@@ -12,6 +12,11 @@ const links = [
     isExternal: true,
   },
   {
+    title: "jimvd.xyz",
+    href: "https:jimvd.xyz",
+    isExternal: true,
+  },
+  {
     title: "Software",
     href: "/software",
   },

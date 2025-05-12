@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/shared/Navbar";
 import FooterSection from "@/components/footer";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -14,14 +15,17 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jimvd.com'),
+  metadataBase: new URL("https://jimvd.com"),
   title: "Jimvd Web Design & Development",
-  description: "Professional web design and development services showcasing modern, responsive templates for various industries. Built with Next.js 15, React, and TypeScript.",
-  keywords: "web design, web development, responsive design, Next.js, React, TypeScript, business websites, professional templates",
+  description:
+    "Professional web design and development services showcasing modern, responsive templates for various industries. Built with Next.js 15, React, and TypeScript.",
+  keywords:
+    "web design, web development, responsive design, Next.js, React, TypeScript, business websites, professional templates",
   openGraph: {
     siteName: "Jimvd Web Design",
     title: "Jimvd Web Design & Development",
-    description: "Professional web design and development services showcasing modern, responsive templates for various industries.",
+    description:
+      "Professional web design and development services showcasing modern, responsive templates for various industries.",
     type: "website",
     locale: "en_US",
     images: [
@@ -29,24 +33,25 @@ export const metadata: Metadata = {
         url: "/api/image",
         width: 1200,
         height: 630,
-        alt: "Jimvd Web Design Portfolio"
-      }
-    ]
+        alt: "Jimvd Web Design Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jimvd Web Design & Development",
-    description: "Professional web design and development services showcasing modern, responsive templates.",
-    images: ["/api/image"]
+    description:
+      "Professional web design and development services showcasing modern, responsive templates.",
+    images: ["/api/image"],
   },
   robots: {
     index: true,
-    follow: true
+    follow: true,
   },
   alternates: {
-    canonical: "https://jimvd.com"
+    canonical: "https://jimvd.com",
   },
-  authors: [{ name: "Jim van duijsen", url: "https://jimvd.com" }]
+  authors: [{ name: "Jim van duijsen", url: "https://jimvd.com" }],
 };
 
 export default function RootLayout({
@@ -62,9 +67,17 @@ export default function RootLayout({
           inter.variable
         )}
       >
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <FooterSection />
+        <script defer src="https://umami.app.jimvd.xyz/script.js" data-website-id="8ceef7e6-25ee-4434-9403-2178553a6565"></script>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar/>
+          <main className="flex-grow">{children}</main>
+          <FooterSection/>
+        </ThemeProvider>
       </body>
     </html>
   );
