@@ -8,22 +8,27 @@ const links = [
   },
   {
     title: "jimvd.com",
-    href: "https:jimvd.com",
+    href: "https://jimvd.com",
     isExternal: true,
   },
   {
     title: "jimvd.xyz",
-    href: "https:jimvd.xyz",
+    href: "https://jimvd.xyz",
     isExternal: true,
   },
   {
     title: "software",
-    href: "https:jimvd.xyz/software",
+    href: "https://jimvd.xyz/software",
     isExternal: true,
   },
   {
     title: "GitHub",
     href: "https://github.com/jim74763/template-site",
+    isExternal: true,
+  },
+  {
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/jim-van-duijsen-1124282a0/",
     isExternal: true,
   }
 ];
