@@ -15,7 +15,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jimvd.com"),
+  metadataBase: new URL("https://jimvd.xyz"),
   title: "Jimvd Web Design & Development",
   description:
     "Professional web design and development services showcasing modern, responsive templates for various industries. Built with Next.js 15, React, and TypeScript.",
@@ -27,10 +27,9 @@ export const metadata: Metadata = {
     description:
       "Professional web design and development services showcasing modern, responsive templates for various industries.",
     type: "website",
-    locale: "en_US",
     images: [
       {
-        url: "/api/image",
+        url: "https://jimvd.xyz/api/og",
         width: 1200,
         height: 630,
         alt: "Jimvd Web Design Portfolio",
@@ -42,14 +41,14 @@ export const metadata: Metadata = {
     title: "Jimvd Web Design & Development",
     description:
       "Professional web design and development services showcasing modern, responsive templates.",
-    images: ["/api/image"],
+    images: ["https://jimvd.xyz/api/og"],
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://jimvd.com",
+    canonical: "https://jimvd.xyz",
   },
   authors: [{ name: "Jim van duijsen", url: "https://jimvd.com" }],
 };

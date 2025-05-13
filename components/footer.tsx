@@ -17,8 +17,9 @@ const links = [
     isExternal: true,
   },
   {
-    title: "Software",
-    href: "/software",
+    title: "software",
+    href: "https:jimvd.xyz/software",
+    isExternal: true,
   },
   {
     title: "GitHub",
