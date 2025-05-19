@@ -40,12 +40,18 @@ export function Navbar() {
         <NavigationMenu className="sm:block hidden">
           <NavigationMenuList>
             <NavigationMenuItem className="flex">
+              <NavigationMenuLink asChild className="mx-1 font-semibold">
+                <Link href="https://jimvd.xyz">Home</Link>
+              </NavigationMenuLink>
+              <p className="py-1">
+                    /
+                  </p>
               <NavigationMenuLink
                 asChild
                 active={pathname === "/"}
                 className="mx-1 font-semibold"
               >
-                <Link href="/">Home</Link>
+                <Link href="/">Templates</Link>
               </NavigationMenuLink>
               {pathSegments.map((segment, id) => (
                 <React.Fragment key={`segment-${id}`}>
@@ -82,7 +88,7 @@ export function Navbar() {
               <NavigationMenuContent>
                 <ul className="grid">
                   <Button
-                  variant="ghost"
+                    variant="ghost"
                     onClick={async (e) => {
                       e.preventDefault();
                       await navigator.share({
@@ -105,7 +111,7 @@ export function Navbar() {
                       }, 2000);
                     }}
                   >
-                    <Link2 size={14}/>
+                    <Link2 size={14} />
                     <motion.span
                       key={copy ? "copied" : "copy"} // Key changes to trigger animation
                       initial={{ opacity: 0 }}
