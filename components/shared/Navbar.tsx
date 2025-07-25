@@ -41,11 +41,15 @@ export function Navbar() {
           <NavigationMenuList>
             <NavigationMenuItem className="flex">
               <NavigationMenuLink asChild className="mx-1 font-semibold">
-                <Link href="https://jimvd.xyz">Home</Link>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://jimvd.xyz"
+                >
+                  Home
+                </Link>
               </NavigationMenuLink>
-              <p className="py-1">
-                    /
-                  </p>
+              <p className="py-1">/</p>
               <NavigationMenuLink
                 asChild
                 active={pathname === "/"}
@@ -129,6 +133,8 @@ export function Navbar() {
               <NavigationMenuLink asChild>
                 <Link
                   href="https://jimvd.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm font-medium mx-2"
                 >
                   jimvd.com
@@ -139,6 +145,8 @@ export function Navbar() {
               <NavigationMenuLink asChild>
                 <Link
                   href="https://jimvd.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm font-medium mx-2"
                 >
                   jimvd.xyz

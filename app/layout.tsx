@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://jimvd.xyz/api/og",
+        url: "images/metadataimage.png'",
         width: 1200,
         height: 630,
         alt: "Jimvd Web Design Portfolio",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Jimvd Web Design & Development",
     description:
       "Professional web design and development services showcasing modern, responsive templates.",
-    images: ["https://jimvd.xyz/api/og"],
+    images: ["images/metadataimage.png'"],
   },
   robots: {
     index: true,
