@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Jimvd Web Design & Development",
     description:
       "Professional web design and development services showcasing modern, responsive templates.",
-    images: ["images/metadataimage.png'"],
+    images: ["images/metaDataImage.jpeg"],
   },
   robots: {
     index: true,
