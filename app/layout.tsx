@@ -15,7 +15,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jimvd.xyz"),
+  metadataBase: new URL("https://template.jimvd.xyz"),
   title: "Jimvd Web Design & Development",
   description:
     "Professional web design and development services showcasing modern, responsive templates for various industries. Built with Next.js 15, React, and TypeScript.",
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "images/metadataimage.png'",
+        url: "images/metaDataImage.jpeg",
         width: 1200,
         height: 630,
-        alt: "Jimvd Web Design Portfolio",
+        alt: "Jimvd Web Design Templates ",
       },
     ],
   },
