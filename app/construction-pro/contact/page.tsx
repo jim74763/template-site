@@ -8,12 +8,12 @@ import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Contact Us | Construction Pro",
-  description: "Get in touch with our construction team for quotes and project inquiries. We serve the greater metropolitan area and surrounding counties.",
-  keywords: ["contact construction", "construction quote", "contractor contact", "building inquiry", "construction estimate"],
+  title: "Contact Us | Construction Pro Template",
+  description: "Contact page template for construction and contracting businesses. Features contact form template, business hours section, and service area placeholder.",
+  keywords: ["construction template", "contact page template", "contractor website template", "construction contact form template"],
   openGraph: {
-    title: "Contact Us | Construction Pro",
-    description: "Get in touch with our construction team for quotes and project inquiries.",
+    title: "Contact Us | Construction Pro Template",
+    description: "Contact page template for construction and contracting businesses.",
     type: "website",
   },
   robots: {

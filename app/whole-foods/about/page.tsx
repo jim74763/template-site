@@ -6,12 +6,12 @@ import { Heart, Users, Globe } from 'lucide-react';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: "About Us | Whole Foods Organic Store",
-  description: "Learn about our story, mission, and commitment to sustainable living. We founded our organic store in 2010 with a passion for healthy living and ethical consumption.",
-  keywords: ["about whole foods", "organic store story", "sustainable grocery", "organic mission", "healthy living", "community focused"],
+  title: "About Us | Whole Foods Template",
+  description: "About page template for organic and sustainable food businesses. Features story section, mission values, community impact, and newsletter signup CTA.",
+  keywords: ["about page template", "organic store template", "sustainable grocery template", "about us page template", "mission values template"],
   openGraph: {
-    title: "About Us | Whole Foods Organic Store",
-    description: "Learn about our story, mission, and commitment to sustainable living.",
+    title: "About Us | Whole Foods Template",
+    description: "About page template for organic and sustainable food businesses.",
     images: ["/images/nature-people.png"],
     type: "website",
   },

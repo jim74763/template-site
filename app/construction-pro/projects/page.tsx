@@ -7,12 +7,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Our Projects | Construction Pro Portfolio",
-  description: "Explore our portfolio of successful construction projects including commercial, residential, and industrial buildings. View project details, locations, and timelines.",
-  keywords: ["construction projects", "portfolio", "building projects", "commercial projects", "residential projects", "industrial buildings", "construction portfolio"],
+  title: "Our Projects | Construction Pro Template Portfolio",
+  description: "Construction projects portfolio template featuring project cards with images, descriptions, location, duration, and size. Perfect for showcasing commercial, residential, and industrial work.",
+  keywords: ["construction template", "projects portfolio template", "building portfolio template", "construction project showcase template"],
   openGraph: {
-    title: "Our Projects | Construction Pro Portfolio",
-    description: "Explore our portfolio of successful construction projects.",
+    title: "Our Projects | Construction Pro Template Portfolio",
+    description: "Construction projects portfolio template showcasing various building projects.",
     images: ["/images/construction-1.png"],
     type: "website",
   },
