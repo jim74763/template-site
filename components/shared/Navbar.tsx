@@ -44,7 +44,7 @@ export function Navbar() {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://jimvd.xyz"
+                  href="https://template.jimvd.xyz"
                 >
                   Home
                 </Link>
