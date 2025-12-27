@@ -1,9 +1,28 @@
-"use client";
+import * as motion from "motion/react-client";
+import type { Metadata } from "next";
 
 import { Button } from '@/components/ui/button';
-import { motion } from 'motion/react';
 import { Heart, Users, Globe } from 'lucide-react';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "About Us | Whole Foods Template",
+  description: "About page template for organic and sustainable food businesses. Features story section, mission values, community impact, and newsletter signup CTA.",
+  keywords: ["about page template", "organic store template", "sustainable grocery template", "about us page template", "mission values template"],
+  openGraph: {
+    title: "About Us | Whole Foods Template",
+    description: "About page template for organic and sustainable food businesses.",
+    images: ["/images/nature-people.png"],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://template.jimvd.xyz/whole-foods/about",
+  },
+};
 
 export default function AboutPage() {
   return (
