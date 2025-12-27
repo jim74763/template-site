@@ -18,7 +18,7 @@ const links = [
   },
   {
     title: "software",
-    href: "https://template.jimvd.xyz/software",
+    href: "https://jimvd.xyz/software",
     isExternal: true,
   },
   {
