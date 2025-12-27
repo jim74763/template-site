@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://jimvd.xyz",
+    canonical: "https://template.jimvd.xyz",
   },
   authors: [{ name: "Jim van duijsen", url: "https://jimvd.com" }],
 };
