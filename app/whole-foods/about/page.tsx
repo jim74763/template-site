@@ -1,8 +1,28 @@
 import * as motion from "motion/react-client";
+import type { Metadata } from "next";
 
 import { Button } from '@/components/ui/button';
 import { Heart, Users, Globe } from 'lucide-react';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "About Us | Whole Foods Organic Store",
+  description: "Learn about our story, mission, and commitment to sustainable living. We founded our organic store in 2010 with a passion for healthy living and ethical consumption.",
+  keywords: ["about whole foods", "organic store story", "sustainable grocery", "organic mission", "healthy living", "community focused"],
+  openGraph: {
+    title: "About Us | Whole Foods Organic Store",
+    description: "Learn about our story, mission, and commitment to sustainable living.",
+    images: ["/images/nature-people.png"],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://template.jimvd.xyz/whole-foods/about",
+  },
+};
 
 export default function AboutPage() {
   return (

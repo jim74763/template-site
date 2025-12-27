@@ -1,9 +1,29 @@
 import * as motion from "motion/react-client";
+import type { Metadata } from "next";
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: "Our Projects | Construction Pro Portfolio",
+  description: "Explore our portfolio of successful construction projects including commercial, residential, and industrial buildings. View project details, locations, and timelines.",
+  keywords: ["construction projects", "portfolio", "building projects", "commercial projects", "residential projects", "industrial buildings", "construction portfolio"],
+  openGraph: {
+    title: "Our Projects | Construction Pro Portfolio",
+    description: "Explore our portfolio of successful construction projects.",
+    images: ["/images/construction-1.png"],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://template.jimvd.xyz/construction-pro/projects",
+  },
+};
 
 export default function ProjectsPage() {
   const projects = [

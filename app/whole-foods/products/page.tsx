@@ -1,7 +1,27 @@
 import * as motion from "motion/react-client";
+import type { Metadata } from "next";
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "Our Products | Whole Foods Organic Store",
+  description: "Browse our selection of organic products including fresh produce, bulk foods, organic grains, and premium nuts. All products are certified organic and sustainably sourced.",
+  keywords: ["organic products", "organic vegetables", "fresh fruits", "bulk foods", "organic grains", "organic nuts", "whole foods products"],
+  openGraph: {
+    title: "Our Products | Whole Foods Organic Store",
+    description: "Browse our selection of organic products including fresh produce, bulk foods, organic grains, and premium nuts.",
+    images: ["/images/nature-1.png"],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://template.jimvd.xyz/whole-foods/products",
+  },
+};
 
 export default function ProductsPage() {
   const products = [
