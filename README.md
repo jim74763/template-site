@@ -27,11 +27,12 @@
 - **Animations**: Motion.dev
 - **Package Manager**: pnpm
 
-
 ## License
+
 MIT License
 
 ## Contact
-For inquiries about custom web development services, please reach out. https://jimvd.com/message
+
+For inquiries about custom web development services, please reach out. https://jimvanduijsen.com/contact
 
 made by Jim van Duijsen

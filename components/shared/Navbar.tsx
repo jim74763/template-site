@@ -28,7 +28,7 @@ export function Navbar() {
         segment
           .split("-")
           .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-          .join(" ")
+          .join(" "),
       ) || [];
 
   const [copy, setCopy] = useState(false);
@@ -82,7 +82,7 @@ export function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Right side - jimvd.com and share */}
+        {/* Right side - jimvanduijsen.com and share */}
         <NavigationMenu>
           <NavigationMenuList className="flex items-center gap-2">
             <NavigationMenuItem>
@@ -132,12 +132,12 @@ export function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  href="https://jimvd.com"
+                  href="https://jimvanduijsen.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium mx-2"
                 >
-                  jimvd.com
+                  jimvanduijsen.com
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>

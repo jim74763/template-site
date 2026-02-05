@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://jimvd.xyz",
   },
-  authors: [{ name: "Jim van duijsen", url: "https://jimvd.com" }],
+  authors: [{ name: "Jim van duijsen", url: "https://jimvanduijsen.com" }],
 };
 
 export default function RootLayout({
@@ -63,19 +63,23 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          inter.variable
+          inter.variable,
         )}
       >
-        <script defer src="https://umami.app.jimvd.xyz/script.js" data-website-id="8ceef7e6-25ee-4434-9403-2178553a6565"></script>
+        <script
+          defer
+          src="https://umami.app.jimvd.xyz/script.js"
+          data-website-id="8ceef7e6-25ee-4434-9403-2178553a6565"
+        ></script>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar/>
+          <Navbar />
           <main className="flex-grow">{children}</main>
-          <FooterSection/>
+          <FooterSection />
         </ThemeProvider>
       </body>
     </html>

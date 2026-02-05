@@ -7,8 +7,8 @@ const links = [
     href: "/",
   },
   {
-    title: "jimvd.com",
-    href: "https://jimvd.com",
+    title: "jimvanduijsen.com",
+    href: "https://jimvanduijsen.com",
     isExternal: true,
   },
   {
@@ -30,7 +30,7 @@ const links = [
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/jim-van-duijsen-1124282a0/",
     isExternal: true,
-  }
+  },
 ];
 
 export default function FooterSection() {
