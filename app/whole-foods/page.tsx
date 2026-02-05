@@ -1,10 +1,29 @@
-"use client";
+import * as motion from "motion/react-client";
+import type { Metadata } from "next";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion } from "motion/react";
 import { Leaf, Apple, ShoppingBasket, Sprout, Store } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Whole Foods Template | Organic & Sustainable Food Business Website",
+  description: "Nature-inspired website template for organic and sustainable food businesses. Features organic certified products, local produce, eco-friendly practices, and bulk options.",
+  keywords: ["whole foods", "organic food store", "sustainable food", "organic grocery", "health food", "natural foods", "eco-friendly grocery"],
+  openGraph: {
+    title: "Whole Foods Template | Organic & Sustainable Food Business Website",
+    description: "Nature-inspired website template for organic and sustainable food businesses. Features organic certified products, local produce, eco-friendly practices, and bulk options.",
+    images: ["/images/nature.png"],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://template.jimvd.xyz/whole-foods",
+  },
+};
 
 export default function WholeFoodStorePage() {
   const pageDetails = {
