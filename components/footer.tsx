@@ -4,6 +4,11 @@ import { ExternalLink } from "lucide-react";
 const links = [
   {
     title: "Home",
+    href: "https://jimvanduijsen.com",
+    isExternal: true,
+  },
+  {
+    title: "Templates",
     href: "/",
   },
   {
