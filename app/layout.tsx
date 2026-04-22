@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://template.jimvd.xyz",
   },
-  authors: [{ name: "Jim van duijsen", url: "https://jimvanduijsen.com" }],
+  authors: [{ name: "Jim van duijsen", url: "https://jimvanduijsen.com?utm_source=template.jimvd.xyz&utm_medium=referral&utm_campaign=template_to_main" }],
 };
 
 export default function RootLayout({

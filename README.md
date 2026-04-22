@@ -33,6 +33,6 @@ MIT License
 
 ## Contact
 
-For inquiries about custom web development services, please reach out. https://jimvanduijsen.com/contact
+For inquiries about custom web development services, please reach out. https://jimvanduijsen.com/contact?utm_source=template.jimvd.xyz&utm_medium=referral&utm_campaign=template_to_main
 
 made by Jim van Duijsen

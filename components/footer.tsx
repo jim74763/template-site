@@ -4,7 +4,7 @@ import { ExternalLink } from "lucide-react";
 const links = [
   {
     title: "Home",
-    href: "https://jimvanduijsen.com",
+    href: "https://jimvanduijsen.com?utm_source=template.jimvd.xyz&utm_medium=referral&utm_campaign=template_to_main",
     isExternal: true,
   },
   {
@@ -13,17 +13,17 @@ const links = [
   },
   {
     title: "jimvanduijsen.com",
-    href: "https://jimvanduijsen.com",
+    href: "https://jimvanduijsen.com?utm_source=template.jimvd.xyz&utm_medium=referral&utm_campaign=template_to_main",
     isExternal: true,
   },
   {
     title: "jimvd.xyz",
-    href: "https://jimvd.xyz",
+    href: "https://jimvd.xyz?utm_source=template_jimvd_xyz&utm_medium=referral&utm_campaign=template_to_main",
     isExternal: true,
   },
   {
     title: "software",
-    href: "https://jimvd.xyz/software",
+    href: "https://jimvd.xyz/software?utm_source=template_jimvd_xyz&utm_medium=referral&utm_campaign=template_to_main",
     isExternal: true,
   },
   {

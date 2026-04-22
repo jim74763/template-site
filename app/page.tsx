@@ -26,11 +26,11 @@ export default function HomePage() {
           Modern Website Templates
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-        Main page <Link href='https://jimvanduijsen.com'  target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
+        Main page <Link href='https://jimvanduijsen.com?utm_source=template.jimvd.xyz&utm_medium=referral&utm_campaign=template_to_main'  target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
               jimvanduijsen.com <ArrowRight className="h-4 w-4" />
             </Link>
           Explore our collection of professionally designed templates, when you work with us this is what your website can look like.
-          Built with <Link href="https://jimvd.xyz/software"  target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">modern technologies</Link> for optimal performance.
+          Built with <Link href="https://jimvd.xyz/software?utm_source=template_jimvd_xyz&utm_medium=referral&utm_campaign=template_to_main"  target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">modern technologies</Link> for optimal performance.
           View the source code on <Link href="https://github.com/jim74763/template-site"  target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1 mr-2">
             GitHub <ArrowRight className="h-4 w-4" />
           </Link><br/>
