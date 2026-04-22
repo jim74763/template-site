@@ -17,13 +17,8 @@ const links = [
     isExternal: true,
   },
   {
-    title: "jimvd.xyz",
-    href: "https://jimvd.xyz",
-    isExternal: true,
-  },
-  {
     title: "software",
-    href: "https://jimvd.xyz/software",
+    href: "https://jimvanduijsen.com/software",
     isExternal: true,
   },
   {
