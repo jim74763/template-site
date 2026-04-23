@@ -44,7 +44,7 @@ export function Navbar() {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://jimvd.xyz"
+                  href="https://jimvanduijsen.com?utm_source=template.jimvd.xyz&utm_medium=referral&utm_campaign=template_to_main"
                 >
                   Home
                 </Link>
@@ -132,7 +132,7 @@ export function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  href="https://jimvanduijsen.com"
+                  href="https://jimvanduijsen.com?utm_source=template.jimvd.xyz&utm_medium=referral&utm_campaign=template_to_main"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium mx-2"
@@ -144,7 +144,7 @@ export function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  href="https://jimvd.xyz"
+                  href="https://jimvd.xyz?utm_source=template_jimvd_xyz&utm_medium=referral&utm_campaign=template_to_main"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium mx-2"
