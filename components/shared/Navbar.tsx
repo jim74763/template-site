@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
 import { Link2, Share } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { ModeToggle } from "../ui/mode-toggle";
 import { Button } from "../ui/button";
@@ -32,6 +32,13 @@ export function Navbar() {
       ) || [];
 
   const [copy, setCopy] = useState(false);
+  const [canShare, setCanShare] = useState(false);
+
+  useEffect(() => {
+    if (typeof navigator !== "undefined" && !!navigator.share) {
+      setCanShare(true);
+    }
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -91,19 +98,25 @@ export function Navbar() {
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid">
-                  <Button
-                    variant="ghost"
-                    onClick={async (e) => {
-                      e.preventDefault();
-                      await navigator.share({
-                        title: document.title,
-                        url: window.location.href,
-                      });
-                    }}
-                  >
-                    <Share size={14} />
-                    <span>Share</span>
-                  </Button>
+                  {canShare && (
+                    <Button
+                      variant="ghost"
+                      onClick={async (e) => {
+                        e.preventDefault();
+                        try {
+                          await navigator.share({
+                            title: document.title,
+                            url: window.location.href,
+                          });
+                        } catch (error) {
+                          console.error("Error sharing:", error);
+                        }
+                      }}
+                    >
+                      <Share size={14} />
+                      <span>Share</span>
+                    </Button>
+                  )}
                   <Button
                     variant="ghost"
                     onClick={(e) => {
