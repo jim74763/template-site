@@ -1,10 +1,10 @@
 import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Leaf, Apple, ShoppingBasket, Sprout, Store } from "lucide-react";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Whole Foods Template | Organic & Sustainable Food Business Website",

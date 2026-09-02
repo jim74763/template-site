@@ -1,10 +1,10 @@
 import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Leaf, ShoppingBasket, Apple, Heart, Truck } from 'lucide-react';
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Leaf, ShoppingBasket, Apple, Heart, Truck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Organic Market Template | Fresh & Organic Foods Website",
@@ -56,21 +56,21 @@ export default function WholeFoodStorePage() {
         image: "/images/wholefood-1.png",
         name: "Fresh Produce",
         description: "Organic fruits and vegetables",
-        with: 800,
+        width: 800,
         height: 600
       },
       {
         image: "/images/wholefood-2.png",
         name: "Bulk Foods",
         description: "Grains, nuts, and dried fruits",
-        with: 800,
+        width: 800,
         height: 600
       },
       {
         image: "/images/wholefood-3.png",
         name: "Organic Dairy",
         description: "Fresh milk, cheese, and eggs",
-        with: 800,
+        width: 800,
         height: 600
       }
     ]
@@ -169,7 +169,7 @@ export default function WholeFoodStorePage() {
               >
                 <div className="relative overflow-hidden rounded-2xl">
                   <Image
-                    width={category.with}
+                    width={category.width}
                     height={category.height}
                     src={category.image}
                     alt={category.name}

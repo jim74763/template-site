@@ -1,9 +1,9 @@
 import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 
-import { Button } from '@/components/ui/button';
-import { Heart, Users, Globe } from 'lucide-react';
-import Image from 'next/image';
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Heart, Users, Globe } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us | Whole Foods Template",
@@ -101,7 +101,13 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Image src="/images/nature-people.png" alt="Store interior" className="rounded-lg shadow-xl" height={500} width={500} />
+              <Image
+                width={500}
+                height={500}
+                src="/images/nature-people.png"
+                alt="Store interior"
+                className="rounded-lg shadow-xl"
+              />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}

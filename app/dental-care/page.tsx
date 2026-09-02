@@ -1,10 +1,16 @@
 import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Smile, Users, Phone } from 'lucide-react';
-import Image from 'next/image';
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { CheckCircle, Smile, Users, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Dental Care Template | Professional Dental Clinic Website",

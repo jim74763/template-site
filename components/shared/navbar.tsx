@@ -1,6 +1,12 @@
 "use client";
 
+import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "motion/react";
+import { Link2, Share } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,15 +15,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { usePathname } from "next/navigation";
-import { Link2, Share } from "lucide-react";
-import React, { useState } from "react";
-import { motion } from "motion/react";
-import { ModeToggle } from "../ui/mode-toggle";
-import { Button } from "../ui/button";
 
 export function Navbar() {
-  //taking the path name and converting it to a string and making the individual words look better
+  // Convert the current path into breadcrumb-friendly segments (e.g. "/organic-market" -> ["Organic Market"])
   const pathname = usePathname();
   const currentPath = pathname?.split("/").filter(Boolean) || [];
   const pathSegments =
@@ -117,7 +117,7 @@ export function Navbar() {
                   >
                     <Link2 size={14} />
                     <motion.span
-                      key={copy ? "copied" : "copy"} // Key changes to trigger animation
+                      key={copy ? "copied" : "copy"}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
