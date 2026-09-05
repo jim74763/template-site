@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function WholeFoodStorePage() {
+export default function OrganicMarketPage() {
   const pageDetails = {
     heroTitle: "Fresh & Organic Foods",
     heroSubtitle: "Nourish your body with nature's finest selection of organic produce and whole foods",

@@ -103,7 +103,7 @@ export default function HomePage() {
               <CardDescription>total pages: {template.pages}</CardDescription>
             </CardHeader>
             <CardContent className="flex-grow flex flex-col justify-end">
-              <Link href={`/${template.path}`} passHref>
+              <Link href={`/${template.path}`}>
                 <Button className="w-full mt-4">
                   View Template <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
