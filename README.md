@@ -1,3 +1,7 @@
+## Status
+
+This project is no longer actively maintained.
+
 ## Features
 
 - Modern, responsive designs for various industries
