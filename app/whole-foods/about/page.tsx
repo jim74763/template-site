@@ -27,6 +27,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
+      {/* Story Section */}
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -87,6 +88,7 @@ export default function AboutPage() {
         </div>
       </motion.section>
 
+      {/* Join Our Journey Section */}
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

@@ -71,6 +71,7 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Products Section */}
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
