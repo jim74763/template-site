@@ -1,7 +1,11 @@
+## Status
+
+This project is no longer actively maintained.
+
 ## Features
 
 - Modern, responsive designs for various industries
-- Built with Next.js 15 and React 19
+- Built with Next.js 16 and React 19
 - Type-safe development with TypeScript
 - Smooth animations using Motion.dev
 - Styled with TailwindCSS and shadcn/ui components
@@ -18,7 +22,7 @@
 
 ## Tech Stack
 
-- **Framework**: Next.js 15.3.1
+- **Framework**: Next.js 16
 - **UI Library**: React 19
 - **Type System**: TypeScript
 - **Styling**: TailwindCSS 4

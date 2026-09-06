@@ -1,10 +1,16 @@
 import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Smile, Users, Phone } from 'lucide-react';
-import Image from 'next/image';
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { CheckCircle, Smile, Users, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Dental Care Template | Professional Dental Clinic Website",
@@ -81,13 +87,7 @@ export default function DentistLandingPage() {
       </motion.section>
 
       {/* Services Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="py-16 md:py-24"
-      >
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">Our Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -117,16 +117,10 @@ export default function DentistLandingPage() {
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* About Us Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="py-16 md:py-24 bg-secondary text-secondary-foreground"
-      >
+      <section className="py-16 md:py-24 bg-secondary text-secondary-foreground">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -137,12 +131,12 @@ export default function DentistLandingPage() {
             >
               <div className="bg-gray-300 h-64 md:h-96 rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
                 <Image
-                src="/images/dentist.png"
-                alt="About Us"
-                width={475}
-                height={500}
-                className="rounded-lg"
-                priority
+                  width={475}
+                  height={500}
+                  src="/images/dentist.png"
+                  alt="About Us"
+                  className="rounded-lg"
+                  priority
                 />
               </div>
             </motion.div>
@@ -160,16 +154,10 @@ export default function DentistLandingPage() {
             </motion.div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Testimonial Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="py-16 md:py-24"
-      >
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">What Our Patients Say</h2>
           <motion.div
@@ -186,7 +174,7 @@ export default function DentistLandingPage() {
             </Card>
           </motion.div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Call to Action Section */}
       <motion.section

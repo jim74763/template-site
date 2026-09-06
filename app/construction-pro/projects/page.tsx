@@ -1,10 +1,10 @@
 import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Our Projects | Construction Pro Template Portfolio",
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
       title: "Modern Office Complex",
       category: "Commercial",
       image: "/images/construction-1.png",
-      witdh: 800,
+      width: 800,
       height: 600,
       description: "A state-of-the-art office complex featuring sustainable design and smart building technology.",
       details: {
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
       title: "Luxury Home Renovation",
       category: "Residential",
       image: "/images/construction-2.png",
-      witdh: 800,
+      width: 800,
       height: 600,
       description: "Complete renovation of a historic mansion, preserving its character while adding modern amenities.",
       details: {
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
       title: "Industrial Warehouse",
       category: "Industrial",
       image: "/images/construction-3.png",
-      witdh: 800,
+      width: 800,
       height: 600,
       description: "Custom-built warehouse facility with advanced logistics capabilities and sustainable features.",
       details: {
@@ -115,7 +115,7 @@ export default function ProjectsPage() {
                 <Card className="overflow-hidden p-0 h-full flex flex-col">
                   <div className="relative h-64">
                     <Image
-                      width={project.witdh}
+                      width={project.width}
                       height={project.height}
                       src={project.image}
                       alt={project.title}
