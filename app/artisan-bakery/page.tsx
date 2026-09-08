@@ -1,10 +1,10 @@
 import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Cake, Coffee, ShoppingBag, Star } from 'lucide-react';
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Cake, Coffee, ShoppingBag, Star } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Artisan Bakery Template | Artisanal Bakery & Café Website",
@@ -56,21 +56,21 @@ export default function BakeryLandingPage() {
         image: "/images/bakery-bread.png",
         name: "Artisan Breads",
         description: "Sourdough, Baguettes, and Whole Grain varieties",
-        with: 600,
+        width: 600,
         height: 400
       },
       {
         image: "/images/bakery-french-pastries.png",
         name: "French Pastries",
         description: "Croissants, Pain au Chocolat, and Danish",
-        with: 600,
+        width: 600,
         height: 400
       },
       {
         image: "/images/bakery-cake.png",
         name: "Custom Cakes",
         description: "Celebration cakes for any special occasion",
-        with: 600,
+        width: 600,
         height: 400
       }
     ]
@@ -169,7 +169,7 @@ export default function BakeryLandingPage() {
               >
                 <div className="relative overflow-hidden rounded-lg">
                   <Image
-                    width={product.with}
+                    width={product.width}
                     height={product.height}
                     src={product.image}
                     alt={product.name}

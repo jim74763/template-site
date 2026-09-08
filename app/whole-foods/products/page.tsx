@@ -1,8 +1,8 @@
 import * as motion from "motion/react-client";
 import type { Metadata } from "next";
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Image from 'next/image';
+import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Our Products | Whole Foods Template",
@@ -71,6 +71,7 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Products Section */}
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/shared/Navbar";
+import { Navbar } from "@/components/shared/navbar";
 import FooterSection from "@/components/footer";
 import { ThemeProvider } from "next-themes";
 
@@ -18,9 +18,17 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://template.jimvd.xyz"),
   title: "Jimvd Web Design & Development",
   description:
-    "Professional web design and development services showcasing modern, responsive templates for various industries. Built with Next.js 15, React, and TypeScript.",
-  keywords:
-    "web design, web development, responsive design, Next.js, React, TypeScript, business websites, professional templates",
+    "Professional web design and development services showcasing modern, responsive templates for various industries. Built with Next.js 16, React, and TypeScript.",
+  keywords: [
+    "web design",
+    "web development",
+    "responsive design",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "business websites",
+    "professional templates",
+  ],
   openGraph: {
     siteName: "Jimvd Web Design",
     title: "Jimvd Web Design & Development",
@@ -29,10 +37,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "images/metaDataImage.jpeg",
+        url: "/images/metaDataImage.jpeg",
         width: 1200,
         height: 630,
-        alt: "Jimvd Web Design Templates ",
+        alt: "Jimvd Web Design Templates",
       },
     ],
   },
@@ -41,7 +49,7 @@ export const metadata: Metadata = {
     title: "Jimvd Web Design & Development",
     description:
       "Professional web design and development services showcasing modern, responsive templates.",
-    images: ["images/metaDataImage.jpeg"],
+    images: ["/images/metaDataImage.jpeg"],
   },
   robots: {
     index: true,
