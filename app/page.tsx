@@ -94,6 +94,22 @@ export default function HomePage() {
         </p>
       </section>
 
+      <section className="text-center mb-12">
+        <p className="text-sm text-muted-foreground border rounded-md px-4 py-3 max-w-2xl mx-auto">
+          This project is no longer actively maintained. For custom web
+          design and development, reach out at{" "}
+          <Link
+            href="https://jimvanduijsen.com?utm_source=template.jimvd.xyz&utm_medium=referral&utm_campaign=template_to_main"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            jimvanduijsen.com
+          </Link>
+          .
+        </p>
+      </section>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {templates.map((template) => (
           <Card key={template.path} className="flex flex-col">
