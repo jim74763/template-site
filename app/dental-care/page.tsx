@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 import { DentalTemplate } from "@/components/dental-care/DentalTemplate";
-import dentalData from "@/components/dental-care/data.json";
-import type { DentalData } from "@/components/dental-care/types";
+import dentalData from "@/lib/dental-care/data";
 
 export const metadata: Metadata = {
   title: "Dental Care Template | Professional Dental Clinic Website",
@@ -24,5 +23,5 @@ export const metadata: Metadata = {
 };
 
 export default function DentistLandingPage() {
-  return <DentalTemplate data={dentalData as DentalData} />;
+  return <DentalTemplate data={dentalData} />;
 }

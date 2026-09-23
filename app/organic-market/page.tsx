@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 import { OrganicMarketTemplate } from "@/components/organic-market/OrganicMarketTemplate";
-import organicMarketData from "@/components/organic-market/data.json";
-import type { OrganicMarketData } from "@/components/organic-market/types";
+import organicMarketData from "@/lib/organic-market/data";
 
 export const metadata: Metadata = {
   title: "Organic Market Template | Fresh & Organic Foods Website",
@@ -24,5 +23,5 @@ export const metadata: Metadata = {
 };
 
 export default function WholeFoodStorePage() {
-  return <OrganicMarketTemplate data={organicMarketData as OrganicMarketData} />;
+  return <OrganicMarketTemplate data={organicMarketData} />;
 }

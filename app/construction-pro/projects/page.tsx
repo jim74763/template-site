@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 import { ConstructionProjectsTemplate } from "@/components/construction-pro/ConstructionProjectsTemplate";
-import constructionData from "@/components/construction-pro/data.json";
-import type { ConstructionData } from "@/components/construction-pro/types";
+import constructionData from "@/lib/construction-pro/data";
 
 export const metadata: Metadata = {
   title: "Our Projects | Construction Pro Template Portfolio",
@@ -23,8 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-const data = constructionData as ConstructionData;
-
 export default function ProjectsPage() {
-  return <ConstructionProjectsTemplate data={data.projects} />;
+  return <ConstructionProjectsTemplate data={constructionData.projects} />;
 }

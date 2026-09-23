@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 import { ConstructionContactTemplate } from "@/components/construction-pro/ConstructionContactTemplate";
-import constructionData from "@/components/construction-pro/data.json";
-import type { ConstructionData } from "@/components/construction-pro/types";
+import constructionData from "@/lib/construction-pro/data";
 
 export const metadata: Metadata = {
   title: "Contact Us | Construction Pro Template",
@@ -22,8 +21,6 @@ export const metadata: Metadata = {
   },
 };
 
-const data = constructionData as ConstructionData;
-
 export default function ContactPage() {
-  return <ConstructionContactTemplate data={data.contact} />;
+  return <ConstructionContactTemplate data={constructionData.contact} />;
 }

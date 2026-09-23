@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 import { BakeryTemplate } from "@/components/artisan-bakery/BakeryTemplate";
-import bakeryData from "@/components/artisan-bakery/data.json";
-import type { BakeryData } from "@/components/artisan-bakery/types";
+import bakeryData from "@/lib/artisan-bakery/data";
 
 export const metadata: Metadata = {
   title: "Artisan Bakery Template | Artisanal Bakery & Café Website",
@@ -24,5 +23,5 @@ export const metadata: Metadata = {
 };
 
 export default function BakeryLandingPage() {
-  return <BakeryTemplate data={bakeryData as BakeryData} />;
+  return <BakeryTemplate data={bakeryData} />;
 }

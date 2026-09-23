@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 import { ConstructionHomeTemplate } from "@/components/construction-pro/ConstructionHomeTemplate";
-import constructionData from "@/components/construction-pro/data.json";
-import type { ConstructionData } from "@/components/construction-pro/types";
+import constructionData from "@/lib/construction-pro/data";
 
 export const metadata: Metadata = {
   title: "Construction Pro Template | Construction & Contracting Business Website",
@@ -23,8 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-const data = constructionData as ConstructionData;
-
 export default function ContractorLandingPage() {
-  return <ConstructionHomeTemplate data={data.home} />;
+  return <ConstructionHomeTemplate data={constructionData.home} />;
 }

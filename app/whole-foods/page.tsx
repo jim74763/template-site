@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 
 import { WholeFoodsHomeTemplate } from "@/components/whole-foods/WholeFoodsHomeTemplate";
-import wholeFoodsData from "@/components/whole-foods/data.json";
-import type { WholeFoodsData } from "@/components/whole-foods/types";
+import wholeFoodsData from "@/lib/whole-foods/data";
 
 export const metadata: Metadata = {
   title: "Whole Foods Template | Organic & Sustainable Food Business Website",
@@ -23,8 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-const data = wholeFoodsData as WholeFoodsData;
-
 export default function WholeFoodStorePage() {
-  return <WholeFoodsHomeTemplate data={data.home} />;
+  return <WholeFoodsHomeTemplate data={wholeFoodsData.home} />;
 }
