@@ -1,4 +1,4 @@
-import type { OrganicMarketData } from "@/components/organic-market/types";
+import type { OrganicMarketData } from "./types";
 
 const organicMarketData: OrganicMarketData = {
   hero: {

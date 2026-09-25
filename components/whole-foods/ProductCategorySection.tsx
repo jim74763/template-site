@@ -1,7 +1,7 @@
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { WholeFoodsProductCategory } from "./types";
+import type { WholeFoodsProductCategory } from "@/lib/website-content/whole-foods/types";
 
 export function ProductCategorySection({ category }: { category: WholeFoodsProductCategory }) {
   return (

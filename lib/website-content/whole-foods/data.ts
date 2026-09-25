@@ -1,4 +1,4 @@
-import type { WholeFoodsData } from "@/components/whole-foods/types";
+import type { WholeFoodsData } from "./types";
 
 const wholeFoodsData: WholeFoodsData = {
   home: {

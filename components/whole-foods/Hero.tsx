@@ -2,7 +2,7 @@ import * as motion from "motion/react-client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ShoppingBasket } from "lucide-react";
-import type { WholeFoodsHomeData } from "./types";
+import type { WholeFoodsHomeData } from "@/lib/website-content/whole-foods/types";
 
 export function Hero({ hero }: { hero: WholeFoodsHomeData["hero"] }) {
   return (

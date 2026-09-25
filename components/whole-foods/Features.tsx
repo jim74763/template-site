@@ -1,7 +1,7 @@
 import * as motion from "motion/react-client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/shared/icon-map";
-import type { WholeFoodsFeature } from "./types";
+import type { WholeFoodsFeature } from "@/lib/website-content/whole-foods/types";
 
 export function Features({ features }: { features: WholeFoodsFeature[] }) {
   return (

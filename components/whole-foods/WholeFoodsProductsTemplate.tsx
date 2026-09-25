@@ -1,6 +1,6 @@
 import * as motion from "motion/react-client";
 import { ProductCategorySection } from "./ProductCategorySection";
-import type { WholeFoodsProductsData } from "./types";
+import type { WholeFoodsProductsData } from "@/lib/website-content/whole-foods/types";
 
 export function WholeFoodsProductsTemplate({ data }: { data: WholeFoodsProductsData }) {
   return (

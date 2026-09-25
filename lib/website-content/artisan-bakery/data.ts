@@ -1,4 +1,4 @@
-import type { BakeryData } from "@/components/artisan-bakery/types";
+import type { BakeryData } from "./types";
 
 const bakeryData: BakeryData = {
   hero: {

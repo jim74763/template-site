@@ -1,6 +1,6 @@
 import { Hero } from "./Hero";
 import { Features } from "./Features";
-import type { WholeFoodsHomeData } from "./types";
+import type { WholeFoodsHomeData } from "@/lib/website-content/whole-foods/types";
 
 export function WholeFoodsHomeTemplate({ data }: { data: WholeFoodsHomeData }) {
   return (

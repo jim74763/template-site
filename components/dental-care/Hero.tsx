@@ -1,6 +1,6 @@
 import * as motion from "motion/react-client";
 import { Button } from "@/components/ui/button";
-import type { DentalData } from "./types";
+import type { DentalData } from "../../lib/website-content/dental-care/types";
 
 export function Hero({ hero }: { hero: DentalData["hero"] }) {
   return (

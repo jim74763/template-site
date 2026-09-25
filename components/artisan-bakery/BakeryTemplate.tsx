@@ -2,7 +2,7 @@ import { Hero } from "./Hero";
 import { Features } from "./Features";
 import { Products } from "./Products";
 import { Cta } from "./Cta";
-import type { BakeryData } from "./types";
+import type { BakeryData } from "@/lib/website-content/artisan-bakery/types";
 
 export function BakeryTemplate({ data }: { data: BakeryData }) {
   return (

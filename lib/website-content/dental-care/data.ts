@@ -1,4 +1,4 @@
-import type { DentalData } from "@/components/dental-care/types";
+import type { DentalData } from "./types";
 
 const dentalData: DentalData = {
   hero: {

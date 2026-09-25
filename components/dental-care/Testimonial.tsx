@@ -1,6 +1,6 @@
 import * as motion from "motion/react-client";
 import { Card, CardContent } from "@/components/ui/card";
-import type { DentalData } from "./types";
+import type { DentalData } from "../../lib/website-content/dental-care/types";
 
 export function Testimonial({ testimonial }: { testimonial: DentalData["testimonial"] }) {
   return (

@@ -1,7 +1,7 @@
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import type { WholeFoodsAboutData } from "./types";
+import type { WholeFoodsAboutData } from "@/lib/website-content/whole-foods/types";
 
 export function AboutJoin({ join }: { join: WholeFoodsAboutData["join"] }) {
   return (

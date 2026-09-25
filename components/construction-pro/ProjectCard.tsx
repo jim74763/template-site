@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
-import type { ConstructionProject } from "./types";
+import type { ConstructionProject } from "@/lib/website-content/construction-pro/types";
 
 export function ProjectCard({ project, index }: { project: ConstructionProject; index: number }) {
   return (

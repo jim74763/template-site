@@ -1,6 +1,6 @@
 import * as motion from "motion/react-client";
 import { Button } from "@/components/ui/button";
-import type { BakeryData } from "./types";
+import type { BakeryData } from "@/lib/website-content/artisan-bakery/types";
 
 export function Hero({ hero }: { hero: BakeryData["hero"] }) {
   return (

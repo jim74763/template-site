@@ -1,7 +1,7 @@
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import type { OrganicMarketData } from "./types";
+import type { OrganicMarketData } from "@/lib/website-content/organic-market/types";
 
 export function Categories({
   categoriesSection,

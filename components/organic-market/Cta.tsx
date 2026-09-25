@@ -1,7 +1,7 @@
 import * as motion from "motion/react-client";
 import { Button } from "@/components/ui/button";
 import { ShoppingBasket } from "lucide-react";
-import type { OrganicMarketData } from "./types";
+import type { OrganicMarketData } from "@/lib/website-content/organic-market/types";
 
 export function Cta({ cta }: { cta: OrganicMarketData["cta"] }) {
   return (

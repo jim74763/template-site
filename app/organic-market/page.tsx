@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { OrganicMarketTemplate } from "@/components/organic-market/OrganicMarketTemplate";
-import organicMarketData from "@/lib/organic-market/data";
+import organicMarketData from "@/lib/website-content/organic-market/data";
 
 export const metadata: Metadata = {
   title: "Organic Market Template | Fresh & Organic Foods Website",

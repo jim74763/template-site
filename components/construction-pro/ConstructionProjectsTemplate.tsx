@@ -1,6 +1,6 @@
 import { SectionHero } from "./SectionHero";
 import { ProjectCard } from "./ProjectCard";
-import type { ConstructionProjectsData } from "./types";
+import type { ConstructionProjectsData } from "@/lib/website-content/construction-pro/types";
 
 export function ConstructionProjectsTemplate({ data }: { data: ConstructionProjectsData }) {
   return (

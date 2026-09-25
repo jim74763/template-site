@@ -1,4 +1,4 @@
-import type { ConstructionData } from "@/components/construction-pro/types";
+import type { ConstructionData } from "./types";
 
 const constructionData: ConstructionData = {
   home: {

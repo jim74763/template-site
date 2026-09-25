@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { BakeryTemplate } from "@/components/artisan-bakery/BakeryTemplate";
-import bakeryData from "@/lib/artisan-bakery/data";
+import bakeryData from "@/lib/website-content/artisan-bakery/data";
 
 export const metadata: Metadata = {
   title: "Artisan Bakery Template | Artisanal Bakery & Café Website",

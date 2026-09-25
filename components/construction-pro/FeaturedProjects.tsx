@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import type { ConstructionHomeData } from "./types";
+import type { ConstructionHomeData } from "@/lib/website-content/construction-pro/types";
 
 export function FeaturedProjects({
   title,

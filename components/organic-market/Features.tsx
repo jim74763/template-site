@@ -1,7 +1,7 @@
 import * as motion from "motion/react-client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/shared/icon-map";
-import type { OrganicMarketFeature } from "./types";
+import type { OrganicMarketFeature } from "@/lib/website-content/organic-market/types";
 
 export function Features({ features }: { features: OrganicMarketFeature[] }) {
   return (

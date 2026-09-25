@@ -1,7 +1,7 @@
 import { Hero } from "./Hero";
 import { Features } from "./Features";
 import { FeaturedProjects } from "./FeaturedProjects";
-import type { ConstructionHomeData } from "./types";
+import type { ConstructionHomeData } from "@/lib/website-content/construction-pro/types";
 
 export function ConstructionHomeTemplate({ data }: { data: ConstructionHomeData }) {
   return (

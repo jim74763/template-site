@@ -2,7 +2,7 @@ import * as motion from "motion/react-client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/shared/icon-map";
-import type { DentalService } from "./types";
+import type { DentalService } from "../../lib/website-content/dental-care/types";
 
 export function Services({ services }: { services: DentalService[] }) {
   return (

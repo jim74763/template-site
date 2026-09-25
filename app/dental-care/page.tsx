@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { DentalTemplate } from "@/components/dental-care/DentalTemplate";
-import dentalData from "@/lib/dental-care/data";
+import dentalData from "@/lib/website-content/dental-care/data";
 
 export const metadata: Metadata = {
   title: "Dental Care Template | Professional Dental Clinic Website",

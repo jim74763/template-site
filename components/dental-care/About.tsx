@@ -1,7 +1,7 @@
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import type { DentalData } from "./types";
+import type { DentalData } from "../../lib/website-content/dental-care/types";
 
 export function About({ about }: { about: DentalData["about"] }) {
   return (

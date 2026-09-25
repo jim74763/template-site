@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { WholeFoodsAboutTemplate } from "@/components/whole-foods/WholeFoodsAboutTemplate";
-import wholeFoodsData from "@/lib/whole-foods/data";
+import wholeFoodsData from "@/lib/website-content/whole-foods/data";
 
 export const metadata: Metadata = {
   title: "About Us | Whole Foods Template",

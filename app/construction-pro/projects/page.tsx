@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { ConstructionProjectsTemplate } from "@/components/construction-pro/ConstructionProjectsTemplate";
-import constructionData from "@/lib/construction-pro/data";
+import constructionData from "@/lib/website-content/construction-pro/data";
 
 export const metadata: Metadata = {
   title: "Our Projects | Construction Pro Template Portfolio",

@@ -1,6 +1,6 @@
 import * as motion from "motion/react-client";
 import { Phone, Mail, MapPin } from "lucide-react";
-import type { ConstructionContactData } from "./types";
+import type { ConstructionContactData } from "@/lib/website-content/construction-pro/types";
 
 export function ContactInfo({
   contactInfo,

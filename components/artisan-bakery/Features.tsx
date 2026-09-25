@@ -1,7 +1,7 @@
 import * as motion from "motion/react-client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/shared/icon-map";
-import type { BakeryFeature } from "./types";
+import type { BakeryFeature } from "@/lib/website-content/artisan-bakery/types";
 
 export function Features({ features }: { features: BakeryFeature[] }) {
   return (
