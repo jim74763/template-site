@@ -22,7 +22,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: data?.companyName || "Your new website",
     description: data ? data.site.content.hero.subtitle : undefined,
-    // Personal demo pages should never show up in search results.
     robots: { index: false, follow: false },
   };
 }

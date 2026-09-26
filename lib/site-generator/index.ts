@@ -1,11 +1,12 @@
 import "server-only";
 
+import type { Lead as InstantlyLead } from "@instantlyai/sdk";
 import { eq } from "drizzle-orm";
 import { cache } from "react";
 
 import { iconMap } from "@/components/shared/icon-map";
 import { getDb, schema } from "@/lib/db";
-import { getInstantlyLead, type InstantlyLead } from "@/lib/instantly";
+import { getInstantlyLead } from "@/lib/instantly/lead-by-id";
 import { chatJson, OPENROUTER_MODEL } from "@/lib/openrouter";
 
 import { mergeGenerated } from "./merge";
@@ -119,7 +120,7 @@ export const getOrCreateLeadSite = cache(async (leadId: string): Promise<LeadSit
       companyName: lead.company_name ?? null,
       website: lead.website ?? lead.company_domain ?? null,
       phone: lead.phone ?? null,
-      raw: lead,
+      raw: { ...lead },
     })
     .onConflictDoNothing();
 
