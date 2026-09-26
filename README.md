@@ -16,6 +16,22 @@
 - **Whole Foods**: Nature-inspired template for sustainable food businesses
 - **Construction Pro**: Robust template for construction businesses
 
+## Lead Sites
+
+`/site/[leadId]` builds a personal demo site for an Instantly lead.
+
+1. First visit: fetches the lead from the Instantly API, picks a template by industry, writes the copy with OpenRouter and stores both in Postgres.
+2. Every visit after that: served straight from the database.
+
+Setup:
+
+```bash
+cp .env.example .env.local   # fill in DATABASE_URL, INSTANTLY_API_KEY, OPENROUTER_API_KEY
+pnpm db:migrate              # create the tables (schema in lib/db/schema.ts)
+```
+
+To regenerate a site, delete its row from `generated_sites` and visit the link again.
+
 ## Tech Stack
 
 - **Framework**: Next.js 15.3.1
