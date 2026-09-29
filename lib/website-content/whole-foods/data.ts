@@ -1,6 +1,6 @@
-import type { WholeFoodsData } from "./types";
+import { wholeFoodsContentSchema } from "./schema";
 
-const wholeFoodsData: WholeFoodsData = {
+const wholeFoodsData = wholeFoodsContentSchema.parse({
   home: {
     hero: {
       title: "Nature's Best Selection",
@@ -109,6 +109,6 @@ const wholeFoodsData: WholeFoodsData = {
       },
     ],
   },
-};
+});
 
 export default wholeFoodsData;

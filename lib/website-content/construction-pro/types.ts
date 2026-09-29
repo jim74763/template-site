@@ -1,77 +1,19 @@
-import type { IconName } from "@/components/shared/icon-map";
+import type { z } from "zod";
 
-export interface ConstructionFeature {
-  icon: IconName;
-  title: string;
-  description: string;
-}
+import type {
+  constructionContactContentSchema,
+  constructionContentSchema,
+  constructionFeatureSchema,
+  constructionHomeContentSchema,
+  constructionHomeProjectSchema,
+  constructionProjectSchema,
+  constructionProjectsContentSchema,
+} from "./schema";
 
-export interface ConstructionHomeProject {
-  image: string;
-  title: string;
-  category: string;
-  width: number;
-  height: number;
-}
-
-export interface ConstructionHomeData {
-  hero: {
-    title: string;
-    subtitle: string;
-    backgroundImage: string;
-    primaryCtaLabel: string;
-    secondaryCtaLabel: string;
-  };
-  features: ConstructionFeature[];
-  featuredProjectsTitle: string;
-  featuredProjects: ConstructionHomeProject[];
-}
-
-export interface ConstructionContactData {
-  hero: {
-    title: string;
-    subtitle: string;
-  };
-  formTitle: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    address: string;
-  };
-  businessHours: {
-    label: string;
-    hours: string;
-  }[];
-  serviceAreas: {
-    title: string;
-    text: string;
-  };
-}
-
-export interface ConstructionProject {
-  title: string;
-  category: string;
-  image: string;
-  width: number;
-  height: number;
-  description: string;
-  details: {
-    location: string;
-    duration: string;
-    size: string;
-  };
-}
-
-export interface ConstructionProjectsData {
-  hero: {
-    title: string;
-    subtitle: string;
-  };
-  projects: ConstructionProject[];
-}
-
-export interface ConstructionData {
-  home: ConstructionHomeData;
-  contact: ConstructionContactData;
-  projects: ConstructionProjectsData;
-}
+export type ConstructionFeature = z.infer<typeof constructionFeatureSchema>;
+export type ConstructionHomeProject = z.infer<typeof constructionHomeProjectSchema>;
+export type ConstructionHomeData = z.infer<typeof constructionHomeContentSchema>;
+export type ConstructionContactData = z.infer<typeof constructionContactContentSchema>;
+export type ConstructionProject = z.infer<typeof constructionProjectSchema>;
+export type ConstructionProjectsData = z.infer<typeof constructionProjectsContentSchema>;
+export type ConstructionData = z.infer<typeof constructionContentSchema>;

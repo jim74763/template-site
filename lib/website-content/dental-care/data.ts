@@ -1,6 +1,6 @@
-import type { DentalData } from "./types";
+import { dentalContentSchema } from "./schema";
 
-const dentalData: DentalData = {
+const dentalData = dentalContentSchema.parse({
   hero: {
     title: "Your Smile, Our Priority",
     subtitle: "Experience compassionate and comprehensive dental care in a state-of-the-art facility.",
@@ -44,6 +44,6 @@ const dentalData: DentalData = {
     text: "Schedule your appointment today and take the first step towards optimal oral health.",
     buttonLabel: "Book Your Visit Now",
   },
-};
+});
 
 export default dentalData;

@@ -1,6 +1,6 @@
-import type { ConstructionData } from "./types";
+import { constructionContentSchema } from "./schema";
 
-const constructionData: ConstructionData = {
+const constructionData = constructionContentSchema.parse({
   home: {
     hero: {
       title: "Building Excellence, Delivering Trust",
@@ -127,6 +127,6 @@ const constructionData: ConstructionData = {
       },
     ],
   },
-};
+});
 
 export default constructionData;

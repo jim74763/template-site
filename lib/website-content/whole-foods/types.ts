@@ -1,63 +1,21 @@
-import type { IconName } from "@/components/shared/icon-map";
+import type { z } from "zod";
 
-export interface WholeFoodsFeature {
-  icon: IconName;
-  title: string;
-  description: string;
-}
+import type {
+  wholeFoodsAboutContentSchema,
+  wholeFoodsContentSchema,
+  wholeFoodsFeatureSchema,
+  wholeFoodsHomeContentSchema,
+  wholeFoodsPillarSchema,
+  wholeFoodsProductCategorySchema,
+  wholeFoodsProductItemSchema,
+  wholeFoodsProductsContentSchema,
+} from "./schema";
 
-export interface WholeFoodsHomeData {
-  hero: {
-    title: string;
-    subtitle: string;
-    backgroundImage: string;
-    primaryCtaLabel: string;
-    secondaryCtaLabel: string;
-  };
-  features: WholeFoodsFeature[];
-}
-
-export interface WholeFoodsPillar {
-  icon: IconName;
-  title: string;
-  text: string;
-}
-
-export interface WholeFoodsAboutData {
-  story: {
-    title: string;
-    intro: string;
-  };
-  pillars: WholeFoodsPillar[];
-  join: {
-    image: string;
-    title: string;
-    text: string;
-    ctaLabel: string;
-  };
-}
-
-export interface WholeFoodsProductItem {
-  name: string;
-  image: string;
-  width: number;
-  height: number;
-  price: string;
-  description: string;
-}
-
-export interface WholeFoodsProductCategory {
-  category: string;
-  items: WholeFoodsProductItem[];
-}
-
-export interface WholeFoodsProductsData {
-  pageTitle: string;
-  categories: WholeFoodsProductCategory[];
-}
-
-export interface WholeFoodsData {
-  home: WholeFoodsHomeData;
-  about: WholeFoodsAboutData;
-  products: WholeFoodsProductsData;
-}
+export type WholeFoodsFeature = z.infer<typeof wholeFoodsFeatureSchema>;
+export type WholeFoodsHomeData = z.infer<typeof wholeFoodsHomeContentSchema>;
+export type WholeFoodsPillar = z.infer<typeof wholeFoodsPillarSchema>;
+export type WholeFoodsAboutData = z.infer<typeof wholeFoodsAboutContentSchema>;
+export type WholeFoodsProductItem = z.infer<typeof wholeFoodsProductItemSchema>;
+export type WholeFoodsProductCategory = z.infer<typeof wholeFoodsProductCategorySchema>;
+export type WholeFoodsProductsData = z.infer<typeof wholeFoodsProductsContentSchema>;
+export type WholeFoodsData = z.infer<typeof wholeFoodsContentSchema>;

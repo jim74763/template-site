@@ -1,31 +1,6 @@
-import type { IconName } from "@/components/shared/icon-map";
+import type { z } from "zod";
 
-export interface DentalService {
-  icon: IconName;
-  title: string;
-  description: string;
-}
+import type { dentalContentSchema, dentalServiceSchema } from "./schema";
 
-export interface DentalData {
-  hero: {
-    title: string;
-    subtitle: string;
-    ctaLabel: string;
-  };
-  services: DentalService[];
-  about: {
-    title: string;
-    text: string;
-    image: string;
-    ctaLabel: string;
-  };
-  testimonial: {
-    quote: string;
-    author: string;
-  };
-  cta: {
-    title: string;
-    text: string;
-    buttonLabel: string;
-  };
-}
+export type DentalService = z.infer<typeof dentalServiceSchema>;
+export type DentalData = z.infer<typeof dentalContentSchema>;

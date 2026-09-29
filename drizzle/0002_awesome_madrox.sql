@@ -1,0 +1,1 @@
+ALTER TABLE "generated_sites" DROP COLUMN "model";

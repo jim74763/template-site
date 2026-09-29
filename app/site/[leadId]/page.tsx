@@ -6,7 +6,7 @@ import { ConstructionHomeTemplate } from "@/components/construction-pro/Construc
 import { DentalTemplate } from "@/components/dental-care/DentalTemplate";
 import { OrganicMarketTemplate } from "@/components/organic-market/OrganicMarketTemplate";
 import { WholeFoodsHomeTemplate } from "@/components/whole-foods/WholeFoodsHomeTemplate";
-import { getOrCreateLeadSite } from "@/lib/site-generator";
+import { getOrCreateLeadSite } from "@/lib/site-generator/lead-site";
 import type { SiteContent } from "@/lib/site-generator/templates";
 
 export const dynamic = "force-dynamic";

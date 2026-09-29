@@ -1,6 +1,6 @@
-import type { OrganicMarketData } from "./types";
+import { organicMarketContentSchema } from "./schema";
 
-const organicMarketData: OrganicMarketData = {
+const organicMarketData = organicMarketContentSchema.parse({
   hero: {
     title: "Fresh & Organic Foods",
     subtitle: "Nourish your body with nature's finest selection of organic produce and whole foods",
@@ -60,6 +60,6 @@ const organicMarketData: OrganicMarketData = {
     text: "Join thousands of happy customers who trust us for their organic food needs",
     buttonLabel: "Start Shopping",
   },
-};
+});
 
 export default organicMarketData;

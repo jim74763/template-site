@@ -1,6 +1,6 @@
-import type { BakeryData } from "./types";
+import { bakeryContentSchema } from "./schema";
 
-const bakeryData: BakeryData = {
+const bakeryData = bakeryContentSchema.parse({
   hero: {
     title: "Artisanal Bakery & Café",
     subtitle: "Fresh, handcrafted pastries and breads baked daily with love",
@@ -60,6 +60,6 @@ const bakeryData: BakeryData = {
     text: "Experience the taste of our freshly baked goods delivered to your doorstep",
     buttonLabel: "Order Now",
   },
-};
+});
 
 export default bakeryData;

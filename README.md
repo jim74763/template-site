@@ -52,3 +52,8 @@ MIT License
 For inquiries about custom web development services, please reach out. https://jimvanduijsen.com/contact
 
 made by Jim van Duijsen
+
+
+# TODO
+[] update instantly.ts to client.ts
+[] refactor db folder
