@@ -6,4 +6,4 @@ if (!apiKey) {
   throw new Error("INSTANTLY_API_KEY is not set");
 }
 
-export const instantly = new Instantly({ apiKey });
+export const instantlyClient = new Instantly({ apiKey });
