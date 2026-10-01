@@ -1,7 +1,10 @@
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
+
+import { resolveLead } from '@/lib/leads/resolve-lead';
 
 interface TemplateInfo {
   path:string;
@@ -18,7 +21,19 @@ const templates: TemplateInfo[] = [
   { path:'construction-pro', name: 'Construction Pro', description: 'Robust and professional template for construction and contracting businesses.',pages:2 }
 ];
 
-export default function HomePage() {
+type HomePageProps = {
+  searchParams: Promise<{ e?: string | string[] }>; 
+};
+
+export default async function HomePage({ searchParams }: HomePageProps) {
+  const { e } = await searchParams;
+  const email = Array.isArray(e) ? e[0] : e;
+
+  if (email) {
+    const leadId = await resolveLead(email);
+    if (leadId) redirect(`/site/${leadId}`);
+  }
+
   return (
     <div className="container mx-auto px-4 py-12">
       <section className="text-center mb-12">
@@ -34,7 +49,7 @@ export default function HomePage() {
           View the source code on <Link href="https://github.com/jim74763/template-site"  target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1 mr-2">
             GitHub <ArrowRight className="h-4 w-4" />
           </Link><br/>
-            
+
         </p>
       </section>
 

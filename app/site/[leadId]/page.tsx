@@ -15,7 +15,7 @@ export const maxDuration = 60;
 
 type Props = { params: Promise<{ leadId: string }> };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+/*export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { leadId } = await params;
   const data = await getOrCreateLeadSite(leadId);
 
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: data ? data.site.content.hero.subtitle : undefined,
     robots: { index: false, follow: false },
   };
-}
+}*/
 
 function SiteRenderer({ site }: { site: SiteContent }) {
   switch (site.template) {
@@ -43,8 +43,9 @@ function SiteRenderer({ site }: { site: SiteContent }) {
 
 export default async function LeadSitePage({ params }: Props) {
   const { leadId } = await params;
-  const data = await getOrCreateLeadSite(leadId);
-  if (!data) notFound();
-
-  return <SiteRenderer site={data.site} />;
+  //@ts-checkconst data = await getOrCreateLeadSite(leadId);
+  //if (!data) notFound();
+  if (!leadId) return <div>loading...</div>
+  //return <SiteRenderer site={data.site} />;
+  return <div>your id is {leadId}</div>;
 }
