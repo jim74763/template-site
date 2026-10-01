@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/shared/Navbar";
 import FooterSection from "@/components/footer";
 import { ThemeProvider } from "next-themes";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -66,11 +67,11 @@ export default function RootLayout({
           inter.variable,
         )}
       >
-        <script
+        <Script
           defer
           src="https://umami.app.jimvd.xyz/script.js"
           data-website-id="8ceef7e6-25ee-4434-9403-2178553a6565"
-        ></script>
+        ></Script>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
