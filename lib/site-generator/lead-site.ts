@@ -40,10 +40,6 @@ function leadSummary(lead: InstantlyLead) {
 }
 
 async function pickTemplate(lead: InstantlyLead): Promise<TemplateKey> {
-  const haystack = JSON.stringify(leadSummary(lead)).toLowerCase();
-  const byKeyword = templateKeys.find((k) => templates[k].keywords.some((w) => haystack.includes(w)));
-  if (byKeyword) return byKeyword;
-
   try {
     const options = templateKeys.map((k) => `- ${k}: ${templates[k].description}`).join("\n");
     const { template } = await chatStructured(
