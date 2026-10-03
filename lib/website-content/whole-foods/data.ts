@@ -31,6 +31,14 @@ const wholeFoodsData = wholeFoodsContentSchema.parse({
         description: "Reduce waste with our bulk food section",
       },
     ],
+    story: {
+      eyebrow: "A better everyday choice",
+      title: "Wholesome food should be easier to understand and enjoy",
+      paragraphs: [
+        "We created our store for people who want to eat well without turning every shopping trip into research. Our shelves bring together honest ingredients, seasonal produce, and practical choices for a more sustainable home.",
+        "Behind each product is a simple question: does it support people and the planet as well as it supports your wellbeing? That question guides our partnerships, our packaging choices, and the advice we share with our community.",
+      ],
+    },
   },
   about: {
     story: {

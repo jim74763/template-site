@@ -1,5 +1,6 @@
 import { Hero } from "./Hero";
 import { Features } from "./Features";
+import { BusinessStory } from "./BusinessStory";
 import type { WholeFoodsHomeData } from "@/lib/website-content/whole-foods/types";
 
 export function WholeFoodsHomeTemplate({ data }: { data: WholeFoodsHomeData }) {
@@ -7,6 +8,7 @@ export function WholeFoodsHomeTemplate({ data }: { data: WholeFoodsHomeData }) {
     <div className="min-h-screen bg-background text-foreground">
       <Hero hero={data.hero} />
       <Features features={data.features} />
+      <BusinessStory story={data.story} />
     </div>
   );
 }

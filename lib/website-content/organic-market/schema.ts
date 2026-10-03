@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import {
+  businessStorySchema,
   copySchema,
   iconNameSchema,
   imageDimensionSchema,
@@ -31,6 +32,7 @@ export const organicMarketContentSchema = z.strictObject({
     ctaLabel: labelSchema,
   }),
   features: z.array(organicMarketFeatureSchema).length(4),
+  story: businessStorySchema,
   categoriesSection: z.strictObject({
     title: titleSchema,
     categories: z.array(organicMarketCategorySchema).length(3),

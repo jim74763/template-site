@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import {
+  businessStorySchema,
   copySchema,
   iconNameSchema,
   imagePathSchema,
@@ -21,6 +22,7 @@ export const dentalContentSchema = z.strictObject({
     ctaLabel: labelSchema,
   }),
   services: z.array(dentalServiceSchema).length(4),
+  story: businessStorySchema,
   about: z.strictObject({
     title: titleSchema,
     text: copySchema,

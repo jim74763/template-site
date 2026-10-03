@@ -15,31 +15,31 @@ import { mergeGenerated } from "./merge";
 
 export const templates = {
   "dental-care": {
-    version: 1,
+    version: 2,
     schema: dentalContentSchema,
     description: "Healthcare and professional services: dentists, clinics, physiotherapy, salons, consultants.",
     defaults: dentalData,
   },
   "artisan-bakery": {
-    version: 1,
+    version: 2,
     schema: bakeryContentSchema,
     description: "Bakeries, cafes, patisseries, coffee bars, lunchrooms and restaurants.",
     defaults: bakeryData,
   },
   "organic-market": {
-    version: 1,
+    version: 2,
     schema: organicMarketContentSchema,
     description: "Grocery stores, organic shops, delis, farm shops and local retail.",
     defaults: organicMarketData,
   },
   "whole-foods": {
-    version: 1,
+    version: 2,
     schema: wholeFoodsHomeContentSchema,
     description: "Health food, sustainable food brands, nutrition and wellness businesses.",
     defaults: wholeFoodsData.home,
   },
   "construction-pro": {
-    version: 1,
+    version: 2,
     schema: constructionHomeContentSchema,
     description: "Construction, contractors, renovation, plumbing, electricians, roofing and other trades.",
     defaults: constructionData.home,
@@ -73,9 +73,9 @@ export function parseStoredSite(template: unknown, schemaVersion: number, conten
   if (!isTemplateKey(template)) throw new Error(`Unknown website template: ${String(template)}`);
 
   const definition = templates[template];
-  if (schemaVersion === 0) {
-    // Version 0 rows predate runtime schemas. Reapply the original merge rules so
-    // malformed values fall back to trusted defaults without discarding valid copy.
+  if (schemaVersion === 0 || schemaVersion === 1) {
+    // Earlier rows predate one or more required fields. Reapply the merge rules so
+    // new defaults fill those gaps without discarding existing generated copy.
     return { template, content: mergeGenerated(definition.defaults, content) } as SiteContent;
   }
 

@@ -29,6 +29,14 @@ const bakeryData = bakeryContentSchema.parse({
       description: "Only the finest ingredients make it to our kitchen",
     },
   ],
+  story: {
+    eyebrow: "Made here, every morning",
+    title: "A neighborhood bakery built around unhurried craft",
+    paragraphs: [
+      "Our day begins before sunrise, when the first loaves go into the oven and the café starts to fill with the scent of butter, coffee, and warm bread. We make each batch by hand so the counter always reflects the rhythm of the season.",
+      "Whether you stop in for a weekday croissant or trust us with a celebration cake, we want every visit to feel personal. Familiar recipes, careful ingredients, and a warm welcome are the simple ideas behind everything we bake.",
+    ],
+  },
   productsSection: {
     title: "Our Specialties",
     products: [

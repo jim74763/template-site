@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import {
+  businessStorySchema,
   copySchema,
   iconNameSchema,
   imageDimensionSchema,
@@ -32,6 +33,7 @@ export const constructionHomeContentSchema = z.strictObject({
     secondaryCtaLabel: labelSchema,
   }),
   features: z.array(constructionFeatureSchema).length(4),
+  story: businessStorySchema,
   featuredProjectsTitle: titleSchema,
   featuredProjects: z.array(constructionHomeProjectSchema).length(3),
 });

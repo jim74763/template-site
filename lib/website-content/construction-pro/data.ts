@@ -31,6 +31,14 @@ const constructionData = constructionContentSchema.parse({
         description: "Meeting deadlines without compromising quality",
       },
     ],
+    story: {
+      eyebrow: "Built on clear communication",
+      title: "We turn complex projects into a process you can trust",
+      paragraphs: [
+        "Every successful build starts long before work begins on site. We listen carefully, plan the details, and make sure everyone understands the decisions ahead so your priorities stay visible from the first conversation to the final walkthrough.",
+        "Our team combines practical experience with steady project management. The result is durable work, fewer surprises, and a finished space that reflects what you set out to create.",
+      ],
+    },
     featuredProjectsTitle: "Featured Projects",
     featuredProjects: [
       {

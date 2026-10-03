@@ -28,6 +28,14 @@ const dentalData = dentalContentSchema.parse({
       description: "Prompt and effective treatment for dental emergencies. Call us anytime.",
     },
   ],
+  story: {
+    eyebrow: "Care that starts with listening",
+    title: "A calmer, more personal way to look after your smile",
+    paragraphs: [
+      "We believe excellent dental care begins with a conversation. Before recommending a treatment, our team takes time to understand your concerns, explain the options clearly, and build a plan that feels comfortable for you.",
+      "From routine visits to longer treatment journeys, you can expect the same thoughtful approach at every appointment. Our goal is to help you feel informed, at ease, and confident about the health of your smile.",
+    ],
+  },
   about: {
     title: "Meet Your Trusted Dental Team",
     text: "At BrightSmile Dental Clinic, we are dedicated to providing personalized care for every patient. Our experienced team uses the latest technology to ensure comfortable and effective treatments. We believe in building lasting relationships based on trust and exceptional dental care.",

@@ -72,6 +72,7 @@ async function generateContent(lead: InstantlyLead, template: TemplateKey): Prom
           "You write website copy for small local businesses.",
           "Rewrite every text field of the example JSON for the business described by the user.",
           "Keep the exact same JSON structure, keys and array lengths.",
+          "Use the story fields for two complementary paragraphs about the business's approach and customer experience.",
           "Do not change image paths, width or height.",
           `For "icon" fields use only one of: ${Object.keys(iconMap).join(", ")}.`,
           "Write in the language that fits the business (Dutch for a Dutch business).",

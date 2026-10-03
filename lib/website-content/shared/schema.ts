@@ -11,3 +11,9 @@ export const titleSchema = z.string().min(1).max(160);
 export const labelSchema = z.string().min(1).max(80);
 export const imagePathSchema = z.string().min(1).max(300);
 export const imageDimensionSchema = z.number().int().positive().max(10_000);
+
+export const businessStorySchema = z.strictObject({
+  eyebrow: labelSchema,
+  title: titleSchema,
+  paragraphs: z.array(copySchema).length(2),
+});
