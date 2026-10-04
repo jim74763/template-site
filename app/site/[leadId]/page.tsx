@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-
 import { BakeryTemplate } from "@/components/artisan-bakery/BakeryTemplate";
 import { ConstructionHomeTemplate } from "@/components/construction-pro/ConstructionHomeTemplate";
 import { DentalTemplate } from "@/components/dental-care/DentalTemplate";
@@ -10,8 +8,7 @@ import { getOrCreateLeadSite } from "@/lib/site-generator/lead-site";
 import type { SiteContent } from "@/lib/site-generator/templates";
 
 export const dynamic = "force-dynamic";
-// First visit fetches the lead and generates copy, which can take a while.
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 type Props = { params: Promise<{ leadId: string }> };
 
