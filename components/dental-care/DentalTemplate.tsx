@@ -4,6 +4,7 @@ import { About } from "./About";
 import { Testimonial } from "./Testimonial";
 import { Cta } from "./Cta";
 import { BusinessStory } from "./BusinessStory";
+import { BusinessFooter } from "./BusinessFooter";
 import type { DentalData } from "@/lib/website-content/dental-care/types";
 
 export function DentalTemplate({ data }: { data: DentalData }) {
@@ -15,6 +16,7 @@ export function DentalTemplate({ data }: { data: DentalData }) {
       <About about={data.about} />
       <Testimonial testimonial={data.testimonial} />
       <Cta cta={data.cta} />
+      <BusinessFooter footer={data.footer} />
     </div>
   );
 }

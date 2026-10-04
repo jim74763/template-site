@@ -76,8 +76,8 @@ async function generateContent(lead: InstantlyLead, template: TemplateKey): Prom
           "Do not change image paths, width or height.",
           `For "icon" fields use only one of: ${Object.keys(iconMap).join(", ")}.`,
           "Write in the language that fits the business (Dutch for a Dutch business).",
-          "Never invent facts like awards, prices, years or reviews that are not in the lead data; keep claims general.",
           "Never use em dashes.",
+          "Use only facts from the business data; keep unsupported claims general and set openingHours or location to null unless exact details, including coordinates, are present.",
         ].join("\n"),
       },
       {

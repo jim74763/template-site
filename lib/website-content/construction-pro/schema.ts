@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import {
+  businessFooterSchema,
   businessStorySchema,
   copySchema,
   iconNameSchema,
@@ -36,6 +37,7 @@ export const constructionHomeContentSchema = z.strictObject({
   story: businessStorySchema,
   featuredProjectsTitle: titleSchema,
   featuredProjects: z.array(constructionHomeProjectSchema).length(3),
+  footer: businessFooterSchema,
 });
 
 export const constructionContactContentSchema = z.strictObject({

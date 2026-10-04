@@ -2,6 +2,7 @@ import { Hero } from "./Hero";
 import { Features } from "./Features";
 import { FeaturedProjects } from "./FeaturedProjects";
 import { BusinessStory } from "./BusinessStory";
+import { BusinessFooter } from "./BusinessFooter";
 import type { ConstructionHomeData } from "@/lib/website-content/construction-pro/types";
 
 export function ConstructionHomeTemplate({ data }: { data: ConstructionHomeData }) {
@@ -11,6 +12,7 @@ export function ConstructionHomeTemplate({ data }: { data: ConstructionHomeData 
       <Features features={data.features} />
       <BusinessStory story={data.story} />
       <FeaturedProjects title={data.featuredProjectsTitle} projects={data.featuredProjects} />
+      <BusinessFooter footer={data.footer} />
     </div>
   );
 }

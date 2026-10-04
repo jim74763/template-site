@@ -68,6 +68,24 @@ const organicMarketData = organicMarketContentSchema.parse({
     text: "Join thousands of happy customers who trust us for their organic food needs",
     buttonLabel: "Start Shopping",
   },
+  footer: {
+    title: "Visit your neighborhood market",
+    text: "Stop by for the season's best produce, pantry staples, and friendly advice.",
+    openingHours: {
+      title: "Market hours",
+      rows: [
+        { days: "Monday - Saturday", hours: "8:00 AM - 7:00 PM" },
+        { days: "Sunday", hours: "9:00 AM - 5:00 PM" },
+      ],
+    },
+    location: {
+      title: "Find us",
+      address: "85 Market Street, Portland, OR",
+      latitude: 45.5152,
+      longitude: -122.6784,
+      zoom: 13,
+    },
+  },
 });
 
 export default organicMarketData;

@@ -39,6 +39,25 @@ const wholeFoodsData = wholeFoodsContentSchema.parse({
         "Behind each product is a simple question: does it support people and the planet as well as it supports your wellbeing? That question guides our partnerships, our packaging choices, and the advice we share with our community.",
       ],
     },
+    footer: {
+      title: "Make us part of your weekly routine",
+      text: "Visit the store for thoughtful ingredients, practical guidance, and plenty of fresh inspiration.",
+      openingHours: {
+        title: "Store hours",
+        rows: [
+          { days: "Monday - Friday", hours: "8:00 - 19:00" },
+          { days: "Saturday", hours: "8:00 - 18:00" },
+          { days: "Sunday", hours: "10:00 - 17:00" },
+        ],
+      },
+      location: {
+        title: "Visit the store",
+        address: "12 Green Lane, Amsterdam",
+        latitude: 52.3676,
+        longitude: 4.9041,
+        zoom: 13,
+      },
+    },
   },
   about: {
     story: {

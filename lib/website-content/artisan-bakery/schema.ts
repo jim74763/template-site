@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import {
+  businessFooterSchema,
   businessStorySchema,
   copySchema,
   iconNameSchema,
@@ -42,4 +43,5 @@ export const bakeryContentSchema = z.strictObject({
     text: copySchema,
     buttonLabel: labelSchema,
   }),
+  footer: businessFooterSchema,
 });

@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 import {
+  businessFooterSchema,
   businessStorySchema,
   copySchema,
   iconNameSchema,
@@ -26,6 +27,7 @@ export const wholeFoodsHomeContentSchema = z.strictObject({
   }),
   features: z.array(wholeFoodsFeatureSchema).length(4),
   story: businessStorySchema,
+  footer: businessFooterSchema,
 });
 
 export const wholeFoodsPillarSchema = z.strictObject({

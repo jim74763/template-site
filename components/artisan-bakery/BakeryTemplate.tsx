@@ -3,6 +3,7 @@ import { Features } from "./Features";
 import { Products } from "./Products";
 import { Cta } from "./Cta";
 import { BusinessStory } from "./BusinessStory";
+import { BusinessFooter } from "./BusinessFooter";
 import type { BakeryData } from "@/lib/website-content/artisan-bakery/types";
 
 export function BakeryTemplate({ data }: { data: BakeryData }) {
@@ -13,6 +14,7 @@ export function BakeryTemplate({ data }: { data: BakeryData }) {
       <BusinessStory story={data.story} />
       <Products productsSection={data.productsSection} />
       <Cta cta={data.cta} />
+      <BusinessFooter footer={data.footer} />
     </div>
   );
 }

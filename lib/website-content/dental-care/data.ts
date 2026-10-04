@@ -52,6 +52,25 @@ const dentalData = dentalContentSchema.parse({
     text: "Schedule your appointment today and take the first step towards optimal oral health.",
     buttonLabel: "Book Your Visit Now",
   },
+  footer: {
+    title: "Plan your visit",
+    text: "Find a time that works for you and see where to find our clinic.",
+    openingHours: {
+      title: "Opening hours",
+      rows: [
+        { days: "Monday - Friday", hours: "8:00 AM - 6:00 PM" },
+        { days: "Saturday", hours: "9:00 AM - 2:00 PM" },
+        { days: "Sunday", hours: "Closed" },
+      ],
+    },
+    location: {
+      title: "Our clinic",
+      address: "123 Smile Avenue, New York, NY",
+      latitude: 40.7128,
+      longitude: -74.006,
+      zoom: 13,
+    },
+  },
 });
 
 export default dentalData;

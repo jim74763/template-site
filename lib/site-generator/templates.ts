@@ -15,31 +15,31 @@ import { mergeGenerated } from "./merge";
 
 export const templates = {
   "dental-care": {
-    version: 2,
+    version: 3,
     schema: dentalContentSchema,
     description: "Healthcare and professional services: dentists, clinics, physiotherapy, salons, consultants.",
     defaults: dentalData,
   },
   "artisan-bakery": {
-    version: 2,
+    version: 3,
     schema: bakeryContentSchema,
     description: "Bakeries, cafes, patisseries, coffee bars, lunchrooms and restaurants.",
     defaults: bakeryData,
   },
   "organic-market": {
-    version: 2,
+    version: 3,
     schema: organicMarketContentSchema,
     description: "Grocery stores, organic shops, delis, farm shops and local retail.",
     defaults: organicMarketData,
   },
   "whole-foods": {
-    version: 2,
+    version: 3,
     schema: wholeFoodsHomeContentSchema,
     description: "Health food, sustainable food brands, nutrition and wellness businesses.",
     defaults: wholeFoodsData.home,
   },
   "construction-pro": {
-    version: 2,
+    version: 3,
     schema: constructionHomeContentSchema,
     description: "Construction, contractors, renovation, plumbing, electricians, roofing and other trades.",
     defaults: constructionData.home,
@@ -73,10 +73,19 @@ export function parseStoredSite(template: unknown, schemaVersion: number, conten
   if (!isTemplateKey(template)) throw new Error(`Unknown website template: ${String(template)}`);
 
   const definition = templates[template];
-  if (schemaVersion === 0 || schemaVersion === 1) {
+  if (schemaVersion === 0 || schemaVersion === 1 || schemaVersion === 2) {
     // Earlier rows predate one or more required fields. Reapply the merge rules so
     // new defaults fill those gaps without discarding existing generated copy.
-    return { template, content: mergeGenerated(definition.defaults, content) } as SiteContent;
+    const merged = mergeGenerated(definition.defaults, content) as TemplateContentMap[typeof template];
+    const source = content && typeof content === "object" ? (content as Record<string, unknown>) : {};
+
+    // Legacy rows have no verified hours or coordinates. Keep their new footer useful
+    // without presenting the template's demonstration details as business facts.
+    if (!("footer" in source)) {
+      merged.footer = { ...merged.footer, openingHours: null, location: null };
+    }
+
+    return { template, content: merged } as SiteContent;
   }
 
   if (schemaVersion !== definition.version) {

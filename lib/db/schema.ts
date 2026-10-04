@@ -25,7 +25,7 @@ export const generatedSites = pgTable(
       .notNull()
       .references(() => leads.id, { onDelete: "cascade" }),
     template: text("template").$type<TemplateKey>().notNull(),
-    schemaVersion: integer("schema_version").default(1).notNull(),
+    schemaVersion: integer("schema_version").default(3).notNull(),
     content: jsonb("content").notNull(),
     createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).defaultNow().notNull(),

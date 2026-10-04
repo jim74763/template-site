@@ -63,6 +63,25 @@ const constructionData = constructionContentSchema.parse({
         height: 600,
       },
     ],
+    footer: {
+      title: "Let's talk about your project",
+      text: "Visit our office or reach out during business hours to discuss the next step.",
+      openingHours: {
+        title: "Office hours",
+        rows: [
+          { days: "Monday - Friday", hours: "8:00 AM - 6:00 PM" },
+          { days: "Saturday", hours: "9:00 AM - 2:00 PM" },
+          { days: "Sunday", hours: "Closed" },
+        ],
+      },
+      location: {
+        title: "Our office",
+        address: "2400 Builders Way, Dallas, TX",
+        latitude: 32.7767,
+        longitude: -96.797,
+        zoom: 13,
+      },
+    },
   },
   contact: {
     hero: {

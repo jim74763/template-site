@@ -68,6 +68,25 @@ const bakeryData = bakeryContentSchema.parse({
     text: "Experience the taste of our freshly baked goods delivered to your doorstep",
     buttonLabel: "Order Now",
   },
+  footer: {
+    title: "Come by for something fresh",
+    text: "The ovens start early and the door stays open for coffee, bread, and a warm welcome.",
+    openingHours: {
+      title: "Bakery hours",
+      rows: [
+        { days: "Monday - Friday", hours: "7:00 AM - 6:00 PM" },
+        { days: "Saturday", hours: "7:00 AM - 4:00 PM" },
+        { days: "Sunday", hours: "8:00 AM - 2:00 PM" },
+      ],
+    },
+    location: {
+      title: "Find the bakery",
+      address: "24 Rue du Marché, Paris",
+      latitude: 48.8566,
+      longitude: 2.3522,
+      zoom: 13,
+    },
+  },
 });
 
 export default bakeryData;

@@ -3,6 +3,7 @@ import { Features } from "./Features";
 import { Categories } from "./Categories";
 import { Cta } from "./Cta";
 import { BusinessStory } from "./BusinessStory";
+import { BusinessFooter } from "./BusinessFooter";
 import type { OrganicMarketData } from "@/lib/website-content/organic-market/types";
 
 export function OrganicMarketTemplate({ data }: { data: OrganicMarketData }) {
@@ -13,6 +14,7 @@ export function OrganicMarketTemplate({ data }: { data: OrganicMarketData }) {
       <BusinessStory story={data.story} />
       <Categories categoriesSection={data.categoriesSection} />
       <Cta cta={data.cta} />
+      <BusinessFooter footer={data.footer} />
     </div>
   );
 }
