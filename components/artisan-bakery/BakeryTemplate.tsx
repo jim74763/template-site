@@ -6,13 +6,19 @@ import { BusinessStory } from "./BusinessStory";
 import { BusinessFooter } from "./BusinessFooter";
 import type { BakeryData } from "@/lib/website-content/artisan-bakery/types";
 
-export function BakeryTemplate({ data }: { data: BakeryData }) {
+export function BakeryTemplate({
+  data,
+  isPreview = false,
+}: {
+  data: BakeryData;
+  isPreview?: boolean;
+}) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Hero hero={data.hero} />
       <Features features={data.features} />
       <BusinessStory story={data.story} />
-      <Products productsSection={data.productsSection} />
+      <Products productsSection={data.productsSection} isPreview={isPreview} />
       <Cta cta={data.cta} />
       <BusinessFooter footer={data.footer} />
     </div>

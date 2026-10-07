@@ -3,7 +3,15 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import type { ConstructionHomeData } from "@/lib/website-content/construction-pro/types";
 
-export function Hero({ hero }: { hero: ConstructionHomeData["hero"] }) {
+export function Hero({
+  hero,
+  primaryHref,
+  secondaryHref,
+}: {
+  hero: ConstructionHomeData["hero"];
+  primaryHref: string;
+  secondaryHref: string;
+}) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -40,12 +48,12 @@ export function Hero({ hero }: { hero: ConstructionHomeData["hero"] }) {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex gap-4 justify-center"
         >
-          <Link href="/construction-pro/contact">
+          <Link href={primaryHref}>
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
               {hero.primaryCtaLabel}
             </Button>
           </Link>
-          <Link href="/construction-pro/projects">
+          <Link href={secondaryHref}>
             <Button
               size="lg"
               variant="outline"

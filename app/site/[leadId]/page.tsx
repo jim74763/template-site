@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+
 import { BakeryTemplate } from "@/components/artisan-bakery/BakeryTemplate";
 import { ConstructionHomeTemplate } from "@/components/construction-pro/ConstructionHomeTemplate";
 import { DentalTemplate } from "@/components/dental-care/DentalTemplate";
@@ -26,21 +28,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function SiteRenderer({ site }: { site: SiteContent }) {
   switch (site.template) {
     case "dental-care":
-      return <DentalTemplate data={site.content} />;
+      return <DentalTemplate data={site.content} isPreview />;
     case "artisan-bakery":
-      return <BakeryTemplate data={site.content} />;
+      return <BakeryTemplate data={site.content} isPreview />;
     case "organic-market":
-      return <OrganicMarketTemplate data={site.content} />;
+      return <OrganicMarketTemplate data={site.content} isPreview />;
     case "whole-foods":
-      return <WholeFoodsHomeTemplate data={site.content} />;
+      return <WholeFoodsHomeTemplate data={site.content} isPreview />;
     case "construction-pro":
-      return <ConstructionHomeTemplate data={site.content} />;
+      return <ConstructionHomeTemplate data={site.content} isPreview />;
   }
 }
 
 export default async function LeadSitePage({ params }: Props) {
   const { leadId } = await params;
   const data = await getOrCreateLeadSite(leadId);
-  if (!data) return <div>not found</div>;
+  if (!data) notFound();
   return <SiteRenderer site={data.site} />;
 }

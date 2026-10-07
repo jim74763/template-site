@@ -3,7 +3,13 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import type { DentalData } from "../../lib/website-content/dental-care/types";
 
-export function About({ about }: { about: DentalData["about"] }) {
+export function About({
+  about,
+  isPreview = false,
+}: {
+  about: DentalData["about"];
+  isPreview?: boolean;
+}) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -21,14 +27,16 @@ export function About({ about }: { about: DentalData["about"] }) {
             transition={{ duration: 0.6 }}
           >
             <div className="bg-gray-300 h-64 md:h-96 rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
-              <Image
-                src={about.image}
-                alt="About Us"
-                width={475}
-                height={500}
-                className="rounded-lg"
-                priority
-              />
+              {!isPreview && (
+                <Image
+                  src={about.image}
+                  alt="About Us"
+                  width={475}
+                  height={500}
+                  className="rounded-lg"
+                  priority
+                />
+              )}
             </div>
           </motion.div>
           <motion.div

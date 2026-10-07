@@ -8,9 +8,13 @@ import type { ConstructionHomeData } from "@/lib/website-content/construction-pr
 export function FeaturedProjects({
   title,
   projects,
+  projectHref,
+  isPreview = false,
 }: {
   title: string;
   projects: ConstructionHomeData["featuredProjects"];
+  projectHref: string;
+  isPreview?: boolean;
 }) {
   return (
     <section className="py-20">
@@ -34,17 +38,19 @@ export function FeaturedProjects({
               className="group cursor-pointer"
             >
               <div className="relative overflow-hidden rounded-lg">
-                <Image
-                  width={project.width}
-                  height={project.height}
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                {!isPreview && (
+                  <Image
+                    width={project.width}
+                    height={project.height}
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                )}
                 <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-sm">{project.category}</p>
-                  <Link href="/construction-pro/projects">
+                  <Link href={projectHref}>
                     <Button variant="secondary" className="mt-4">
                       View Project <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>

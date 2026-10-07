@@ -3,7 +3,13 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import type { BakeryData } from "@/lib/website-content/artisan-bakery/types";
 
-export function Products({ productsSection }: { productsSection: BakeryData["productsSection"] }) {
+export function Products({
+  productsSection,
+  isPreview = false,
+}: {
+  productsSection: BakeryData["productsSection"];
+  isPreview?: boolean;
+}) {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -26,13 +32,15 @@ export function Products({ productsSection }: { productsSection: BakeryData["pro
               className="group cursor-pointer"
             >
               <div className="relative overflow-hidden rounded-lg">
-                <Image
-                  width={product.width}
-                  height={product.height}
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                {!isPreview && (
+                  <Image
+                    width={product.width}
+                    height={product.height}
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                )}
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Button variant="secondary">Learn More</Button>
                 </div>

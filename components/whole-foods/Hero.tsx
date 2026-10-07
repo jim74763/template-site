@@ -4,7 +4,15 @@ import { Button } from "@/components/ui/button";
 import { ShoppingBasket } from "lucide-react";
 import type { WholeFoodsHomeData } from "@/lib/website-content/whole-foods/types";
 
-export function Hero({ hero }: { hero: WholeFoodsHomeData["hero"] }) {
+export function Hero({
+  hero,
+  primaryHref,
+  secondaryHref,
+}: {
+  hero: WholeFoodsHomeData["hero"];
+  primaryHref: string;
+  secondaryHref: string;
+}) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -41,12 +49,12 @@ export function Hero({ hero }: { hero: WholeFoodsHomeData["hero"] }) {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex gap-4 justify-center"
         >
-          <Link href="/whole-foods/products">
+          <Link href={primaryHref}>
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
               {hero.primaryCtaLabel} <ShoppingBasket className="ml-2 h-5 w-5" />
             </Button>
           </Link>
-          <Link href="/whole-foods/about">
+          <Link href={secondaryHref}>
             <Button
               size="lg"
               variant="outline"
