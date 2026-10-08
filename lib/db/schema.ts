@@ -16,7 +16,6 @@ export const leads = pgTable("leads", {
   fetchedAt: timestamp("fetched_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
-// Generated website content, one per lead.
 export const generatedSites = pgTable(
   "generated_sites",
   {

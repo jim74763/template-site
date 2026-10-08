@@ -17,7 +17,6 @@ import { ModeToggle } from "../ui/mode-toggle";
 import { Button } from "../ui/button";
 
 export function Navbar() {
-  //taking the path name and converting it to a string and making the individual words look better
   const pathname = usePathname();
   const currentPath = pathname?.split("/").filter(Boolean) || [];
   const pathSegments =
@@ -36,7 +35,6 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center sm:justify-between justify-center">
-        {/* Left side - Breadcrumbs */}
         <NavigationMenu className="sm:block hidden">
           <NavigationMenuList>
             <NavigationMenuItem className="flex">
@@ -82,7 +80,6 @@ export function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Right side - jimvanduijsen.com and share */}
         <NavigationMenu>
           <NavigationMenuList className="flex items-center gap-2">
             <NavigationMenuItem>

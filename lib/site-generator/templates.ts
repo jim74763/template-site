@@ -11,8 +11,6 @@ import { organicMarketContentSchema } from "@/lib/website-content/organic-market
 import wholeFoodsData from "@/lib/website-content/whole-foods/data";
 import { wholeFoodsHomeContentSchema } from "@/lib/website-content/whole-foods/schema";
 
-import { mergeGenerated } from "./merge";
-
 export const templates = {
   "dental-care": {
     version: 3,
@@ -67,32 +65,4 @@ export function parseTemplateContent<K extends TemplateKey>(
   content: unknown,
 ): TemplateContentMap[K] {
   return templates[template].schema.parse(content) as TemplateContentMap[K];
-}
-
-export function parseStoredSite(template: unknown, schemaVersion: number, content: unknown): SiteContent {
-  if (!isTemplateKey(template)) throw new Error(`Unknown website template: ${String(template)}`);
-
-  const definition = templates[template];
-  if (schemaVersion === 0 || schemaVersion === 1 || schemaVersion === 2) {
-    // Earlier rows predate one or more required fields. Reapply the merge rules so
-    // new defaults fill those gaps without discarding existing generated copy.
-    const merged = mergeGenerated(definition.defaults, content) as TemplateContentMap[typeof template];
-    const source = content && typeof content === "object" ? (content as Record<string, unknown>) : {};
-
-    // Legacy rows have no verified hours or coordinates. Keep their new footer useful
-    // without presenting the template's demonstration details as business facts.
-    if (!("footer" in source)) {
-      merged.footer = { ...merged.footer, openingHours: null, location: null };
-    }
-
-    return { template, content: merged } as SiteContent;
-  }
-
-  if (schemaVersion !== definition.version) {
-    throw new Error(
-      `Unsupported schema version ${schemaVersion} for ${template}; expected ${definition.version}`,
-    );
-  }
-
-  return { template, content: parseTemplateContent(template, content) } as SiteContent;
 }
