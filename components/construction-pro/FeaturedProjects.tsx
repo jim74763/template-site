@@ -1,9 +1,9 @@
-import * as motion from "motion/react-client";
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import type { ConstructionHomeData } from "@/lib/website-content/construction-pro/types";
+import * as motion from 'motion/react-client'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
+import type { ConstructionHomeData } from '@/lib/website-content/construction-pro/types'
 
 export function FeaturedProjects({
   title,
@@ -11,10 +11,10 @@ export function FeaturedProjects({
   projectHref,
   isPreview = false,
 }: {
-  title: string;
-  projects: ConstructionHomeData["featuredProjects"];
-  projectHref: string;
-  isPreview?: boolean;
+  title: string
+  projects: ConstructionHomeData['featuredProjects']
+  projectHref: string
+  isPreview?: boolean
 }) {
   return (
     <section className="py-20">
@@ -62,5 +62,5 @@ export function FeaturedProjects({
         </div>
       </div>
     </section>
-  );
+  )
 }

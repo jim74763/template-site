@@ -1,14 +1,14 @@
-import * as motion from "motion/react-client";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import type { DentalData } from "../../lib/website-content/dental-care/types";
+import * as motion from 'motion/react-client'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import type { DentalData } from '../../lib/website-content/dental-care/types'
 
 export function About({
   about,
   isPreview = false,
 }: {
-  about: DentalData["about"];
-  isPreview?: boolean;
+  about: DentalData['about']
+  isPreview?: boolean
 }) {
   return (
     <motion.section
@@ -45,14 +45,19 @@ export function About({
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">{about.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {about.title}
+            </h2>
             <p className="text-lg mb-6">{about.text}</p>
-            <Button variant="outline" className="border-primary-foreground hover:bg-primary-foreground">
+            <Button
+              variant="outline"
+              className="border-primary-foreground hover:bg-primary-foreground"
+            >
               {about.ctaLabel}
             </Button>
           </motion.div>
         </div>
       </div>
     </motion.section>
-  );
+  )
 }

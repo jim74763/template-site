@@ -1,8 +1,8 @@
-import * as motion from "motion/react-client";
-import { Button } from "@/components/ui/button";
-import type { DentalData } from "../../lib/website-content/dental-care/types";
+import * as motion from 'motion/react-client'
+import { Button } from '@/components/ui/button'
+import type { DentalData } from '../../lib/website-content/dental-care/types'
 
-export function Cta({ cta }: { cta: DentalData["cta"] }) {
+export function Cta({ cta }: { cta: DentalData['cta'] }) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -19,5 +19,5 @@ export function Cta({ cta }: { cta: DentalData["cta"] }) {
         </Button>
       </div>
     </motion.section>
-  );
+  )
 }

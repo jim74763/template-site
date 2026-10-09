@@ -1,7 +1,7 @@
-import * as motion from "motion/react-client";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Icon } from "@/components/icon-map";
-import type { BakeryFeature } from "@/lib/website-content/artisan-bakery/types";
+import * as motion from 'motion/react-client'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Icon } from '@/components/icon-map'
+import type { BakeryFeature } from '@/lib/website-content/artisan-bakery/types'
 
 export function Features({ features }: { features: BakeryFeature[] }) {
   return (
@@ -19,7 +19,10 @@ export function Features({ features }: { features: BakeryFeature[] }) {
               <Card className="text-center h-full">
                 <CardHeader>
                   <div className="flex justify-center">
-                    <Icon name={feature.icon} className="w-8 h-8 text-primary mb-2" />
+                    <Icon
+                      name={feature.icon}
+                      className="w-8 h-8 text-primary mb-2"
+                    />
                   </div>
                   <CardTitle className="mt-4">{feature.title}</CardTitle>
                 </CardHeader>
@@ -32,5 +35,5 @@ export function Features({ features }: { features: BakeryFeature[] }) {
         </div>
       </div>
     </section>
-  );
+  )
 }

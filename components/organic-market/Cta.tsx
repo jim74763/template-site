@@ -1,9 +1,9 @@
-import * as motion from "motion/react-client";
-import { Button } from "@/components/ui/button";
-import { ShoppingBasket } from "lucide-react";
-import type { OrganicMarketData } from "@/lib/website-content/organic-market/types";
+import * as motion from 'motion/react-client'
+import { Button } from '@/components/ui/button'
+import { ShoppingBasket } from 'lucide-react'
+import type { OrganicMarketData } from '@/lib/website-content/organic-market/types'
 
-export function Cta({ cta }: { cta: OrganicMarketData["cta"] }) {
+export function Cta({ cta }: { cta: OrganicMarketData['cta'] }) {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -19,5 +19,5 @@ export function Cta({ cta }: { cta: OrganicMarketData["cta"] }) {
         </Button>
       </div>
     </motion.section>
-  );
+  )
 }

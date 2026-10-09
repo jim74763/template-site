@@ -1,7 +1,7 @@
-import * as motion from "motion/react-client";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Icon } from "@/components/icon-map";
-import type { WholeFoodsFeature } from "@/lib/website-content/whole-foods/types";
+import * as motion from 'motion/react-client'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Icon } from '@/components/icon-map'
+import type { WholeFoodsFeature } from '@/lib/website-content/whole-foods/types'
 
 export function Features({ features }: { features: WholeFoodsFeature[] }) {
   return (
@@ -19,7 +19,10 @@ export function Features({ features }: { features: WholeFoodsFeature[] }) {
               <Card className="text-center h-full border-none shadow-lg hover:shadow-xl transition-shadow">
                 <CardHeader>
                   <div className="flex justify-center">
-                    <Icon name={feature.icon} className="w-8 h-8 text-primary mb-2" />
+                    <Icon
+                      name={feature.icon}
+                      className="w-8 h-8 text-primary mb-2"
+                    />
                   </div>
                   <CardTitle className="mt-4">{feature.title}</CardTitle>
                 </CardHeader>
@@ -32,5 +35,5 @@ export function Features({ features }: { features: WholeFoodsFeature[] }) {
         </div>
       </div>
     </section>
-  );
+  )
 }

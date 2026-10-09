@@ -1,8 +1,8 @@
-import * as motion from "motion/react-client";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import * as motion from 'motion/react-client'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 
 export function ContactForm({ title }: { title: string }) {
   return (
@@ -26,12 +26,15 @@ export function ContactForm({ title }: { title: string }) {
               <Input placeholder="Phone Number" />
             </div>
             <div className="space-y-2">
-              <Textarea placeholder="Tell us about your project" className="min-h-[150px]" />
+              <Textarea
+                placeholder="Tell us about your project"
+                className="min-h-[150px]"
+              />
             </div>
             <Button className="w-full">Send Message</Button>
           </form>
         </CardContent>
       </Card>
     </motion.div>
-  );
+  )
 }

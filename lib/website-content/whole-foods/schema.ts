@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod'
 
 import {
   businessFooterSchema,
@@ -9,13 +9,13 @@ import {
   imagePathSchema,
   labelSchema,
   titleSchema,
-} from "@/lib/website-content/shared/schema";
+} from '@/lib/website-content/shared/schema'
 
 export const wholeFoodsFeatureSchema = z.strictObject({
   icon: iconNameSchema,
   title: titleSchema,
   description: copySchema,
-});
+})
 
 export const wholeFoodsHomeContentSchema = z.strictObject({
   hero: z.strictObject({
@@ -28,13 +28,13 @@ export const wholeFoodsHomeContentSchema = z.strictObject({
   features: z.array(wholeFoodsFeatureSchema).length(4),
   story: businessStorySchema,
   footer: businessFooterSchema,
-});
+})
 
 export const wholeFoodsPillarSchema = z.strictObject({
   icon: iconNameSchema,
   title: titleSchema,
   text: copySchema,
-});
+})
 
 export const wholeFoodsAboutContentSchema = z.strictObject({
   story: z.strictObject({
@@ -48,7 +48,7 @@ export const wholeFoodsAboutContentSchema = z.strictObject({
     text: copySchema,
     ctaLabel: labelSchema,
   }),
-});
+})
 
 export const wholeFoodsProductItemSchema = z.strictObject({
   name: titleSchema,
@@ -57,20 +57,20 @@ export const wholeFoodsProductItemSchema = z.strictObject({
   height: imageDimensionSchema,
   price: labelSchema,
   description: copySchema,
-});
+})
 
 export const wholeFoodsProductCategorySchema = z.strictObject({
   category: titleSchema,
   items: z.array(wholeFoodsProductItemSchema).length(2),
-});
+})
 
 export const wholeFoodsProductsContentSchema = z.strictObject({
   pageTitle: titleSchema,
   categories: z.array(wholeFoodsProductCategorySchema).length(2),
-});
+})
 
 export const wholeFoodsContentSchema = z.strictObject({
   home: wholeFoodsHomeContentSchema,
   about: wholeFoodsAboutContentSchema,
   products: wholeFoodsProductsContentSchema,
-});
+})

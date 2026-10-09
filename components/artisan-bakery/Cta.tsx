@@ -1,8 +1,8 @@
-import * as motion from "motion/react-client";
-import { Button } from "@/components/ui/button";
-import type { BakeryData } from "@/lib/website-content/artisan-bakery/types";
+import * as motion from 'motion/react-client'
+import { Button } from '@/components/ui/button'
+import type { BakeryData } from '@/lib/website-content/artisan-bakery/types'
 
-export function Cta({ cta }: { cta: BakeryData["cta"] }) {
+export function Cta({ cta }: { cta: BakeryData['cta'] }) {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -18,5 +18,5 @@ export function Cta({ cta }: { cta: BakeryData["cta"] }) {
         </Button>
       </div>
     </motion.section>
-  );
+  )
 }

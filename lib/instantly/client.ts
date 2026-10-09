@@ -1,9 +1,9 @@
-import { Instantly } from "@instantlyai/sdk";
+import { Instantly } from '@instantlyai/sdk'
 
-const apiKey = process.env.INSTANTLY_API_KEY;
+const apiKey = process.env.INSTANTLY_API_KEY
 
 if (!apiKey) {
-  throw new Error("INSTANTLY_API_KEY is not set");
+  throw new Error('INSTANTLY_API_KEY is not set')
 }
 
-export const instantlyClient = new Instantly({ apiKey });
+export const instantlyClient = new Instantly({ apiKey })

@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod'
 
 import {
   businessFooterSchema,
@@ -8,13 +8,13 @@ import {
   imagePathSchema,
   labelSchema,
   titleSchema,
-} from "@/lib/website-content/shared/schema";
+} from '@/lib/website-content/shared/schema'
 
 export const dentalServiceSchema = z.strictObject({
   icon: iconNameSchema,
   title: titleSchema,
   description: copySchema,
-});
+})
 
 export const dentalContentSchema = z.strictObject({
   hero: z.strictObject({
@@ -40,4 +40,4 @@ export const dentalContentSchema = z.strictObject({
     buttonLabel: labelSchema,
   }),
   footer: businessFooterSchema,
-});
+})

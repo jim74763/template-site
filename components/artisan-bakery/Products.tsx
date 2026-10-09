@@ -1,14 +1,14 @@
-import * as motion from "motion/react-client";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import type { BakeryData } from "@/lib/website-content/artisan-bakery/types";
+import * as motion from 'motion/react-client'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import type { BakeryData } from '@/lib/website-content/artisan-bakery/types'
 
 export function Products({
   productsSection,
   isPreview = false,
 }: {
-  productsSection: BakeryData["productsSection"];
-  isPreview?: boolean;
+  productsSection: BakeryData['productsSection']
+  isPreview?: boolean
 }) {
   return (
     <section className="py-20">
@@ -52,5 +52,5 @@ export function Products({
         </div>
       </div>
     </section>
-  );
+  )
 }

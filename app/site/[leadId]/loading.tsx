@@ -4,5 +4,5 @@ export default function Loading() {
       <div className="h-8 w-8 rounded-full border-2 border-muted border-t-foreground animate-spin" />
       <p>Your website is getting loaded...</p>
     </div>
-  );
+  )
 }

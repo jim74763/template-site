@@ -1,9 +1,13 @@
-import { SectionHero } from "./SectionHero";
-import { ContactForm } from "./ContactForm";
-import { ContactInfo } from "./ContactInfo";
-import type { ConstructionContactData } from "@/lib/website-content/construction-pro/types";
+import { SectionHero } from './SectionHero'
+import { ContactForm } from './ContactForm'
+import { ContactInfo } from './ContactInfo'
+import type { ConstructionContactData } from '@/lib/website-content/construction-pro/types'
 
-export function ConstructionContactTemplate({ data }: { data: ConstructionContactData }) {
+export function ConstructionContactTemplate({
+  data,
+}: {
+  data: ConstructionContactData
+}) {
   return (
     <div className="min-h-screen bg-background">
       <SectionHero title={data.hero.title} subtitle={data.hero.subtitle} />
@@ -20,5 +24,5 @@ export function ConstructionContactTemplate({ data }: { data: ConstructionContac
         </div>
       </section>
     </div>
-  );
+  )
 }

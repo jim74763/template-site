@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod'
 
 import {
   businessFooterSchema,
@@ -9,13 +9,13 @@ import {
   imagePathSchema,
   labelSchema,
   titleSchema,
-} from "@/lib/website-content/shared/schema";
+} from '@/lib/website-content/shared/schema'
 
 export const organicMarketFeatureSchema = z.strictObject({
   icon: iconNameSchema,
   title: titleSchema,
   description: copySchema,
-});
+})
 
 export const organicMarketCategorySchema = z.strictObject({
   image: imagePathSchema,
@@ -23,7 +23,7 @@ export const organicMarketCategorySchema = z.strictObject({
   description: copySchema,
   width: imageDimensionSchema,
   height: imageDimensionSchema,
-});
+})
 
 export const organicMarketContentSchema = z.strictObject({
   hero: z.strictObject({
@@ -44,4 +44,4 @@ export const organicMarketContentSchema = z.strictObject({
     buttonLabel: labelSchema,
   }),
   footer: businessFooterSchema,
-});
+})

@@ -1,8 +1,14 @@
-import * as motion from "motion/react-client";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import type { DentalService } from "../../lib/website-content/dental-care/types";
-import { Icon } from "../icon-map";
+import * as motion from 'motion/react-client'
+import { Button } from '@/components/ui/button'
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import type { DentalService } from '../../lib/website-content/dental-care/types'
+import { Icon } from '../icon-map'
 
 export function Services({ services }: { services: DentalService[] }) {
   return (
@@ -14,7 +20,9 @@ export function Services({ services }: { services: DentalService[] }) {
       className="py-16 md:py-24"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">Our Services</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">
+          Our Services
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <motion.div
@@ -27,7 +35,10 @@ export function Services({ services }: { services: DentalService[] }) {
               <Card className="text-center h-full flex flex-col">
                 <CardHeader>
                   <div className="flex justify-center items-center mb-2">
-                    <Icon name={service.icon} className="w-8 h-8 text-primary mb-2" />
+                    <Icon
+                      name={service.icon}
+                      className="w-8 h-8 text-primary mb-2"
+                    />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
@@ -45,5 +56,5 @@ export function Services({ services }: { services: DentalService[] }) {
         </div>
       </div>
     </motion.section>
-  );
+  )
 }

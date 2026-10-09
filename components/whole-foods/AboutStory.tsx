@@ -1,13 +1,13 @@
-import * as motion from "motion/react-client";
-import { Icon } from "@/components/icon-map";
-import type { WholeFoodsAboutData } from "@/lib/website-content/whole-foods/types";
+import * as motion from 'motion/react-client'
+import { Icon } from '@/components/icon-map'
+import type { WholeFoodsAboutData } from '@/lib/website-content/whole-foods/types'
 
 export function AboutStory({
   story,
   pillars,
 }: {
-  story: WholeFoodsAboutData["story"];
-  pillars: WholeFoodsAboutData["pillars"];
+  story: WholeFoodsAboutData['story']
+  pillars: WholeFoodsAboutData['pillars']
 }) {
   return (
     <motion.section
@@ -38,7 +38,10 @@ export function AboutStory({
               transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
               className="text-center"
             >
-              <Icon name={pillar.icon} className="w-12 h-12 text-primary mx-auto mb-4" />
+              <Icon
+                name={pillar.icon}
+                className="w-12 h-12 text-primary mx-auto mb-4"
+              />
               <h3 className="text-xl font-semibold mb-3">{pillar.title}</h3>
               <p className="text-muted-foreground">{pillar.text}</p>
             </motion.div>
@@ -46,5 +49,5 @@ export function AboutStory({
         </div>
       </div>
     </motion.section>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import * as motion from "motion/react-client";
-import type { z } from "zod";
+import * as motion from 'motion/react-client'
+import type { z } from 'zod'
 
-import type { businessStorySchema } from "@/lib/website-content/shared/schema";
+import type { businessStorySchema } from '@/lib/website-content/shared/schema'
 
-type BusinessStoryData = z.infer<typeof businessStorySchema>;
+type BusinessStoryData = z.infer<typeof businessStorySchema>
 
 export function BusinessStory({ story }: { story: BusinessStoryData }) {
   return (
@@ -22,7 +22,9 @@ export function BusinessStory({ story }: { story: BusinessStoryData }) {
               <p className="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-muted-foreground">
                 {story.eyebrow}
               </p>
-              <h2 className="max-w-xl text-3xl font-bold leading-tight md:text-5xl">{story.title}</h2>
+              <h2 className="max-w-xl text-3xl font-bold leading-tight md:text-5xl">
+                {story.title}
+              </h2>
             </div>
             <div className="space-y-7 border-l border-border pl-6 text-lg leading-8 text-muted-foreground md:pl-10">
               {story.paragraphs.map((paragraph, index) => (
@@ -33,5 +35,5 @@ export function BusinessStory({ story }: { story: BusinessStoryData }) {
         </div>
       </motion.div>
     </section>
-  );
+  )
 }

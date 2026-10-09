@@ -1,4 +1,4 @@
-import type { z } from "zod";
+import type { z } from 'zod'
 
 import type {
   constructionContactContentSchema,
@@ -8,12 +8,18 @@ import type {
   constructionHomeProjectSchema,
   constructionProjectSchema,
   constructionProjectsContentSchema,
-} from "./schema";
+} from './schema'
 
-export type ConstructionFeature = z.infer<typeof constructionFeatureSchema>;
-export type ConstructionHomeProject = z.infer<typeof constructionHomeProjectSchema>;
-export type ConstructionHomeData = z.infer<typeof constructionHomeContentSchema>;
-export type ConstructionContactData = z.infer<typeof constructionContactContentSchema>;
-export type ConstructionProject = z.infer<typeof constructionProjectSchema>;
-export type ConstructionProjectsData = z.infer<typeof constructionProjectsContentSchema>;
-export type ConstructionData = z.infer<typeof constructionContentSchema>;
+export type ConstructionFeature = z.infer<typeof constructionFeatureSchema>
+export type ConstructionHomeProject = z.infer<
+  typeof constructionHomeProjectSchema
+>
+export type ConstructionHomeData = z.infer<typeof constructionHomeContentSchema>
+export type ConstructionContactData = z.infer<
+  typeof constructionContactContentSchema
+>
+export type ConstructionProject = z.infer<typeof constructionProjectSchema>
+export type ConstructionProjectsData = z.infer<
+  typeof constructionProjectsContentSchema
+>
+export type ConstructionData = z.infer<typeof constructionContentSchema>

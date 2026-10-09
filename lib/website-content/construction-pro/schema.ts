@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod'
 
 import {
   businessFooterSchema,
@@ -9,13 +9,13 @@ import {
   imagePathSchema,
   labelSchema,
   titleSchema,
-} from "@/lib/website-content/shared/schema";
+} from '@/lib/website-content/shared/schema'
 
 export const constructionFeatureSchema = z.strictObject({
   icon: iconNameSchema,
   title: titleSchema,
   description: copySchema,
-});
+})
 
 export const constructionHomeProjectSchema = z.strictObject({
   image: imagePathSchema,
@@ -23,7 +23,7 @@ export const constructionHomeProjectSchema = z.strictObject({
   category: labelSchema,
   width: imageDimensionSchema,
   height: imageDimensionSchema,
-});
+})
 
 export const constructionHomeContentSchema = z.strictObject({
   hero: z.strictObject({
@@ -38,7 +38,7 @@ export const constructionHomeContentSchema = z.strictObject({
   featuredProjectsTitle: titleSchema,
   featuredProjects: z.array(constructionHomeProjectSchema).length(3),
   footer: businessFooterSchema,
-});
+})
 
 export const constructionContactContentSchema = z.strictObject({
   hero: z.strictObject({
@@ -51,17 +51,19 @@ export const constructionContactContentSchema = z.strictObject({
     email: labelSchema,
     address: copySchema,
   }),
-  businessHours: z.array(
-    z.strictObject({
-      label: labelSchema,
-      hours: labelSchema,
-    }),
-  ).length(3),
+  businessHours: z
+    .array(
+      z.strictObject({
+        label: labelSchema,
+        hours: labelSchema,
+      }),
+    )
+    .length(3),
   serviceAreas: z.strictObject({
     title: titleSchema,
     text: copySchema,
   }),
-});
+})
 
 export const constructionProjectSchema = constructionHomeProjectSchema.extend({
   description: copySchema,
@@ -70,7 +72,7 @@ export const constructionProjectSchema = constructionHomeProjectSchema.extend({
     duration: labelSchema,
     size: labelSchema,
   }),
-});
+})
 
 export const constructionProjectsContentSchema = z.strictObject({
   hero: z.strictObject({
@@ -78,10 +80,10 @@ export const constructionProjectsContentSchema = z.strictObject({
     subtitle: copySchema,
   }),
   projects: z.array(constructionProjectSchema).length(3),
-});
+})
 
 export const constructionContentSchema = z.strictObject({
   home: constructionHomeContentSchema,
   contact: constructionContactContentSchema,
   projects: constructionProjectsContentSchema,
-});
+})

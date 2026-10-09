@@ -1,9 +1,13 @@
-import * as motion from "motion/react-client";
-import Image from "next/image";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { WholeFoodsProductCategory } from "@/lib/website-content/whole-foods/types";
+import * as motion from 'motion/react-client'
+import Image from 'next/image'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import type { WholeFoodsProductCategory } from '@/lib/website-content/whole-foods/types'
 
-export function ProductCategorySection({ category }: { category: WholeFoodsProductCategory }) {
+export function ProductCategorySection({
+  category,
+}: {
+  category: WholeFoodsProductCategory
+}) {
   return (
     <div className="mb-16">
       <motion.h2
@@ -46,5 +50,5 @@ export function ProductCategorySection({ category }: { category: WholeFoodsProdu
         ))}
       </div>
     </div>
-  );
+  )
 }

@@ -1,17 +1,17 @@
-import "server-only";
+import 'server-only'
 
-import { ResponseError, type Lead } from "@instantlyai/sdk";
+import { ResponseError, type Lead } from '@instantlyai/sdk'
 
-import { instantlyClient } from "./client";
+import { instantlyClient } from './client'
 
 export async function getInstantlyLead(id: string): Promise<Lead | null> {
   try {
-    return await instantlyClient.leads.getLead({ id });
+    return await instantlyClient.leads.getLead({ id })
   } catch (error) {
     if (error instanceof ResponseError && error.response.status === 404) {
-      return null;
+      return null
     }
 
-    throw error;
+    throw error
   }
 }

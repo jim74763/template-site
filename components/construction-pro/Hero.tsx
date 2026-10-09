@@ -1,16 +1,16 @@
-import * as motion from "motion/react-client";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import type { ConstructionHomeData } from "@/lib/website-content/construction-pro/types";
+import * as motion from 'motion/react-client'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import type { ConstructionHomeData } from '@/lib/website-content/construction-pro/types'
 
 export function Hero({
   hero,
   primaryHref,
   secondaryHref,
 }: {
-  hero: ConstructionHomeData["hero"];
-  primaryHref: string;
-  secondaryHref: string;
+  hero: ConstructionHomeData['hero']
+  primaryHref: string
+  secondaryHref: string
 }) {
   return (
     <motion.section
@@ -65,5 +65,5 @@ export function Hero({
         </motion.div>
       </div>
     </motion.section>
-  );
+  )
 }

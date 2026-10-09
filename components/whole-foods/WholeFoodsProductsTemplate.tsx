@@ -1,8 +1,12 @@
-import * as motion from "motion/react-client";
-import { ProductCategorySection } from "./ProductCategorySection";
-import type { WholeFoodsProductsData } from "@/lib/website-content/whole-foods/types";
+import * as motion from 'motion/react-client'
+import { ProductCategorySection } from './ProductCategorySection'
+import type { WholeFoodsProductsData } from '@/lib/website-content/whole-foods/types'
 
-export function WholeFoodsProductsTemplate({ data }: { data: WholeFoodsProductsData }) {
+export function WholeFoodsProductsTemplate({
+  data,
+}: {
+  data: WholeFoodsProductsData
+}) {
   return (
     <div className="min-h-screen bg-background">
       <motion.section
@@ -23,10 +27,13 @@ export function WholeFoodsProductsTemplate({ data }: { data: WholeFoodsProductsD
           </motion.h1>
 
           {data.categories.map((category) => (
-            <ProductCategorySection key={category.category} category={category} />
+            <ProductCategorySection
+              key={category.category}
+              category={category}
+            />
           ))}
         </div>
       </motion.section>
     </div>
-  );
+  )
 }

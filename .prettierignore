@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+build/
+coverage/
+pnpm-lock.yaml
+skills-lock.json
+next-env.d.ts
+drizzle/meta/

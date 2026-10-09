@@ -1,17 +1,17 @@
-import * as motion from "motion/react-client";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ShoppingBasket } from "lucide-react";
-import type { WholeFoodsHomeData } from "@/lib/website-content/whole-foods/types";
+import * as motion from 'motion/react-client'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { ShoppingBasket } from 'lucide-react'
+import type { WholeFoodsHomeData } from '@/lib/website-content/whole-foods/types'
 
 export function Hero({
   hero,
   primaryHref,
   secondaryHref,
 }: {
-  hero: WholeFoodsHomeData["hero"];
-  primaryHref: string;
-  secondaryHref: string;
+  hero: WholeFoodsHomeData['hero']
+  primaryHref: string
+  secondaryHref: string
 }) {
   return (
     <motion.section
@@ -66,5 +66,5 @@ export function Hero({
         </motion.div>
       </div>
     </motion.section>
-  );
+  )
 }

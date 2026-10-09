@@ -1,11 +1,17 @@
-import * as motion from "motion/react-client";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
-import type { ConstructionProject } from "@/lib/website-content/construction-pro/types";
+import * as motion from 'motion/react-client'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { ArrowRight } from 'lucide-react'
+import type { ConstructionProject } from '@/lib/website-content/construction-pro/types'
 
-export function ProjectCard({ project, index }: { project: ConstructionProject; index: number }) {
+export function ProjectCard({
+  project,
+  index,
+}: {
+  project: ConstructionProject
+  index: number
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -29,7 +35,9 @@ export function ProjectCard({ project, index }: { project: ConstructionProject; 
         </div>
         <CardContent className="p-6 flex flex-col flex-grow">
           <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-          <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
+          <p className="text-muted-foreground mb-4 flex-grow">
+            {project.description}
+          </p>
           <div className="grid grid-cols-3 gap-4 mb-6">
             <div>
               <p className="text-sm text-muted-foreground">Location</p>
@@ -50,5 +58,5 @@ export function ProjectCard({ project, index }: { project: ConstructionProject; 
         </CardContent>
       </Card>
     </motion.div>
-  );
+  )
 }

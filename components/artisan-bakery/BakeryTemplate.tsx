@@ -1,17 +1,17 @@
-import { Hero } from "./Hero";
-import { Features } from "./Features";
-import { Products } from "./Products";
-import { Cta } from "./Cta";
-import { BusinessStory } from "./BusinessStory";
-import { BusinessFooter } from "./BusinessFooter";
-import type { BakeryData } from "@/lib/website-content/artisan-bakery/types";
+import { Hero } from './Hero'
+import { Features } from './Features'
+import { Products } from './Products'
+import { Cta } from './Cta'
+import { BusinessStory } from './BusinessStory'
+import { BusinessFooter } from './BusinessFooter'
+import type { BakeryData } from '@/lib/website-content/artisan-bakery/types'
 
 export function BakeryTemplate({
   data,
   isPreview = false,
 }: {
-  data: BakeryData;
-  isPreview?: boolean;
+  data: BakeryData
+  isPreview?: boolean
 }) {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -22,5 +22,5 @@ export function BakeryTemplate({
       <Cta cta={data.cta} />
       <BusinessFooter footer={data.footer} />
     </div>
-  );
+  )
 }
