@@ -1,7 +1,7 @@
 import "server-only";
 import type { Lead as InstantlyLead } from "@instantlyai/sdk";
 import { z } from "zod";
-import { iconMap } from "@/components/shared/icon-map";
+import { iconMap } from "@/components/icon-map";
 import { chatStructured } from "@/lib/ai/openrouter/chat-structured";
 import { mergeGenerated } from "./merge";
 import { parseTemplateContent, templateKeys, templates, type SiteContent, type TemplateKey } from "./templates";

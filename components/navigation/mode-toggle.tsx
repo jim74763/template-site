@@ -11,11 +11,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { NavigationMenuItem } from "../ui/navigation-menu"
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
 
-  return (
+    return (
+    <NavigationMenuItem className="sm:block hidden">
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
@@ -35,6 +37,7 @@ export function ModeToggle() {
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+            </DropdownMenu>
+    </NavigationMenuItem>
   )
 }

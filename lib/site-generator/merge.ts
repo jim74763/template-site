@@ -1,4 +1,4 @@
-import { iconMap } from "@/components/shared/icon-map";
+import { iconMap } from "@/components/icon-map";
 
 const LOCKED_KEYS = new Set(["image", "backgroundImage", "width", "height"]);
 const OPTIONAL_KEYS = new Set(["openingHours", "location"]);

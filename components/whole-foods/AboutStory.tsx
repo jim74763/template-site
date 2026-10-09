@@ -1,5 +1,5 @@
 import * as motion from "motion/react-client";
-import { Icon } from "@/components/shared/icon-map";
+import { Icon } from "@/components/icon-map";
 import type { WholeFoodsAboutData } from "@/lib/website-content/whole-foods/types";
 
 export function AboutStory({

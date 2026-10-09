@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import { FooterLink, type FooterLinkProps } from "./footer-link";
+import { CreditLine } from "./credit-line";
 
-const links = [
+
+
+const links:FooterLinkProps[] = [
   {
     title: "Home",
     href: "https://jimvanduijsen.com?utm_source=template.jimvd.xyz&utm_medium=referral&utm_campaign=template_to_main",
@@ -38,26 +42,15 @@ const links = [
   },
 ];
 
-export default function FooterSection() {
+export default function Footer() {
   return (
     <footer className="border-b bg-white py-12 dark:bg-transparent">
       <div className="mx-auto max-w-5xl px-6">
         <div className="flex flex-wrap justify-between gap-6">
-          <span className="text-muted-foreground order-last block text-center text-sm md:order-first">
-            {new Date().getFullYear()} Jim van Duijsen
-          </span>
+          <CreditLine/>
           <div className="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last">
-            {links.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                className="text-muted-foreground hover:text-primary block duration-150"
-              >
-                <span className="flex gap-1">
-                  {link.title}
-                  {link.isExternal && <ExternalLink size={14} />}
-                </span>
-              </Link>
+            {links.map((link, idx) => (
+              <FooterLink key={idx} link={link}/>
             ))}
           </div>
         </div>

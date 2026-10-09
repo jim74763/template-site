@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { iconMap, type IconName } from "@/components/shared/icon-map";
+import { iconMap, type IconName } from "@/components/icon-map";
 
 const iconNames = Object.keys(iconMap) as [IconName, ...IconName[]];
 

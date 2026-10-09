@@ -3,10 +3,10 @@ import { Inter } from "next/font/google";
 import "leaflet/dist/leaflet.css";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/shared/Navbar";
-import FooterSection from "@/components/footer";
+import Footer from "@/components/navigation/footer";
 import { ThemeProvider } from "next-themes";
 import Script from "next/script";
+import { Navbar } from "@/components/navigation/navbar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -81,7 +81,7 @@ export default function RootLayout({
         >
           <Navbar />
           <main className="flex-grow">{children}</main>
-          <FooterSection />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
