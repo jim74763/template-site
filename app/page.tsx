@@ -1,23 +1,9 @@
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
-import { Button } from '@/components/ui/button'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+import { TemplateCard, type TemplateInfo } from '@/components/template-card'
 import { ArrowRight } from 'lucide-react'
 
 import { resolveLead } from '@/lib/leads/resolve-lead'
-
-interface TemplateInfo {
-  path: string
-  name: string
-  description: string
-  pages: number
-}
 
 const templates: TemplateInfo[] = [
   {
@@ -110,21 +96,8 @@ export default async function HomePage({ searchParams }: HomePageProps) {
       </section>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {templates.map((template, id) => (
-          <Card key={id} className="flex flex-col">
-            <CardHeader>
-              <CardTitle>{template.name}</CardTitle>
-              <CardDescription>{template.description}</CardDescription>
-              <CardDescription>total pages: {template.pages}</CardDescription>
-            </CardHeader>
-            <CardContent className="flex-grow flex flex-col justify-end">
-              <Link href={`/${template.path}`} passHref>
-                <Button className="w-full mt-4">
-                  View Template <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </CardContent>
-          </Card>
+        {templates.map((template) => (
+          <TemplateCard key={template.path} template={template} />
         ))}
       </div>
     </div>
