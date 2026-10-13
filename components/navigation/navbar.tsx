@@ -20,7 +20,7 @@ const websiteLinks: WebsiteLinks[] = [
     href: 'https://jimvanduijsen.com?utm_source=template.jimvd.xyz&utm_medium=referral&utm_campaign=template_to_main',
   },
   {
-    title: 'Jimvd.com',
+    title: 'Jimvd.xyz',
     href: 'https://jimvd.xyz?utm_source=template_jimvd_xyz&utm_medium=referral&utm_campaign=template_to_main',
   },
 ]
