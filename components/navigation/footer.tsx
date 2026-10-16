@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import { ExternalLink } from 'lucide-react'
 import { FooterLink, type FooterLinkProps } from './footer-link'
 import { CreditLine } from './credit-line'
 
