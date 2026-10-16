@@ -1,27 +1,37 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next'
 
-import { WholeFoodsHomeTemplate } from "@/components/whole-foods/WholeFoodsHomeTemplate";
-import wholeFoodsData from "@/lib/website-content/whole-foods/data";
+import { WholeFoodsHomeTemplate } from '@/components/whole-foods/WholeFoodsHomeTemplate'
+import wholeFoodsData from '@/lib/website-content/whole-foods/data'
 
 export const metadata: Metadata = {
-  title: "Whole Foods Template | Organic & Sustainable Food Business Website",
-  description: "Nature-inspired website template for organic and sustainable food businesses. Features organic certified products, local produce, eco-friendly practices, and bulk options.",
-  keywords: ["whole foods", "organic food store", "sustainable food", "organic grocery", "health food", "natural foods", "eco-friendly grocery"],
+  title: 'Whole Foods Template | Organic & Sustainable Food Business Website',
+  description:
+    'Nature-inspired website template for organic and sustainable food businesses. Features organic certified products, local produce, eco-friendly practices, and bulk options.',
+  keywords: [
+    'whole foods',
+    'organic food store',
+    'sustainable food',
+    'organic grocery',
+    'health food',
+    'natural foods',
+    'eco-friendly grocery',
+  ],
   openGraph: {
-    title: "Whole Foods Template | Organic & Sustainable Food Business Website",
-    description: "Nature-inspired website template for organic and sustainable food businesses. Features organic certified products, local produce, eco-friendly practices, and bulk options.",
-    images: ["/images/nature.png"],
-    type: "website",
+    title: 'Whole Foods Template | Organic & Sustainable Food Business Website',
+    description:
+      'Nature-inspired website template for organic and sustainable food businesses. Features organic certified products, local produce, eco-friendly practices, and bulk options.',
+    images: ['/images/nature.png'],
+    type: 'website',
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://template.jimvd.xyz/whole-foods",
+    canonical: 'https://template.jimvd.xyz/whole-foods',
   },
-};
+}
 
 export default function WholeFoodStorePage() {
-  return <WholeFoodsHomeTemplate data={wholeFoodsData.home} />;
+  return <WholeFoodsHomeTemplate data={wholeFoodsData.home} />
 }

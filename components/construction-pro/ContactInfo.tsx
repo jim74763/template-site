@@ -1,15 +1,15 @@
-import * as motion from "motion/react-client";
-import { Phone, Mail, MapPin } from "lucide-react";
-import type { ConstructionContactData } from "@/lib/website-content/construction-pro/types";
+import * as motion from 'motion/react-client'
+import { Phone, Mail, MapPin } from 'lucide-react'
+import type { ConstructionContactData } from '@/lib/website-content/construction-pro/types'
 
 export function ContactInfo({
   contactInfo,
   businessHours,
   serviceAreas,
 }: {
-  contactInfo: ConstructionContactData["contactInfo"];
-  businessHours: ConstructionContactData["businessHours"];
-  serviceAreas: ConstructionContactData["serviceAreas"];
+  contactInfo: ConstructionContactData['contactInfo']
+  businessHours: ConstructionContactData['businessHours']
+  serviceAreas: ConstructionContactData['serviceAreas']
 }) {
   return (
     <motion.div
@@ -53,5 +53,5 @@ export function ContactInfo({
         <p className="text-muted-foreground">{serviceAreas.text}</p>
       </div>
     </motion.div>
-  );
+  )
 }

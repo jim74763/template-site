@@ -1,9 +1,9 @@
-import * as motion from "motion/react-client";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import type { WholeFoodsAboutData } from "@/lib/website-content/whole-foods/types";
+import * as motion from 'motion/react-client'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import type { WholeFoodsAboutData } from '@/lib/website-content/whole-foods/types'
 
-export function AboutJoin({ join }: { join: WholeFoodsAboutData["join"] }) {
+export function AboutJoin({ join }: { join: WholeFoodsAboutData['join'] }) {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -40,5 +40,5 @@ export function AboutJoin({ join }: { join: WholeFoodsAboutData["join"] }) {
         </div>
       </div>
     </motion.section>
-  );
+  )
 }

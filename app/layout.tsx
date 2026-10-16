@@ -1,76 +1,78 @@
-import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/shared/Navbar";
-import FooterSection from "@/components/footer";
-import { ThemeProvider } from "next-themes";
+import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
+import 'leaflet/dist/leaflet.css'
+import './globals.css'
+import { cn } from '@/lib/utils'
+import Footer from '@/components/navigation/footer'
+import { ThemeProvider } from 'next-themes'
+import Script from 'next/script'
+import { Navbar } from '@/components/navigation/navbar'
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
 export const viewport: Viewport = {
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
-  themeColor: "#ffffff",
-};
+  themeColor: '#ffffff',
+}
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://template.jimvd.xyz"),
-  title: "Jimvd Web Design & Development",
+  metadataBase: new URL('https://template.jimvd.xyz'),
+  title: 'Jimvd Web Design & Development',
   description:
-    "Professional web design and development services showcasing modern, responsive templates for various industries. Built with Next.js 15, React, and TypeScript.",
+    'Professional web design and development services showcasing modern, responsive templates for various industries. Built with Next.js 15, React, and TypeScript.',
   keywords:
-    "web design, web development, responsive design, Next.js, React, TypeScript, business websites, professional templates",
+    'web design, web development, responsive design, Next.js, React, TypeScript, business websites, professional templates',
   openGraph: {
-    siteName: "Jimvd Web Design",
-    title: "Jimvd Web Design & Development",
+    siteName: 'Jimvd Web Design',
+    title: 'Jimvd Web Design & Development',
     description:
-      "Professional web design and development services showcasing modern, responsive templates for various industries.",
-    type: "website",
+      'Professional web design and development services showcasing modern, responsive templates for various industries.',
+    type: 'website',
     images: [
       {
-        url: "images/metaDataImage.jpeg",
+        url: 'images/metaDataImage.jpeg',
         width: 1200,
         height: 630,
-        alt: "Jimvd Web Design Templates ",
+        alt: 'Jimvd Web Design Templates ',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Jimvd Web Design & Development",
+    card: 'summary_large_image',
+    title: 'Jimvd Web Design & Development',
     description:
-      "Professional web design and development services showcasing modern, responsive templates.",
-    images: ["images/metaDataImage.jpeg"],
+      'Professional web design and development services showcasing modern, responsive templates.',
+    images: ['images/metaDataImage.jpeg'],
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://template.jimvd.xyz",
+    canonical: 'https://template.jimvd.xyz',
   },
-  authors: [{ name: "Jim van duijsen", url: "https://jimvanduijsen.com" }],
-};
+  authors: [{ name: 'Jim van duijsen', url: 'https://jimvanduijsen.com' }],
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          'min-h-screen bg-background font-sans antialiased',
           inter.variable,
         )}
       >
-        <script
+        <Script
           defer
           src="https://umami.app.jimvd.xyz/script.js"
           data-website-id="8ceef7e6-25ee-4434-9403-2178553a6565"
-        ></script>
+        ></Script>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -79,9 +81,9 @@ export default function RootLayout({
         >
           <Navbar />
           <main className="flex-grow">{children}</main>
-          <FooterSection />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -119,4 +119,18 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.leaflet-container {
+  z-index: 0;
+  font: inherit;
+}
+
+.leaflet-business-marker {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 3px solid var(--primary-foreground);
+  border-radius: 9999px;
+  background: var(--primary);
 }

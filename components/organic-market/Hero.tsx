@@ -1,9 +1,9 @@
-import * as motion from "motion/react-client";
-import { Button } from "@/components/ui/button";
-import { ShoppingBasket } from "lucide-react";
-import type { OrganicMarketData } from "@/lib/website-content/organic-market/types";
+import * as motion from 'motion/react-client'
+import { Button } from '@/components/ui/button'
+import { ShoppingBasket } from 'lucide-react'
+import type { OrganicMarketData } from '@/lib/website-content/organic-market/types'
 
-export function Hero({ hero }: { hero: OrganicMarketData["hero"] }) {
+export function Hero({ hero }: { hero: OrganicMarketData['hero'] }) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -45,5 +45,5 @@ export function Hero({ hero }: { hero: OrganicMarketData["hero"] }) {
         </motion.div>
       </div>
     </motion.section>
-  );
+  )
 }

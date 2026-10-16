@@ -1,6 +1,12 @@
-import * as motion from "motion/react-client";
+import * as motion from 'motion/react-client'
 
-export function SectionHero({ title, subtitle }: { title: string; subtitle: string }) {
+export function SectionHero({
+  title,
+  subtitle,
+}: {
+  title: string
+  subtitle: string
+}) {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -29,5 +35,5 @@ export function SectionHero({ title, subtitle }: { title: string; subtitle: stri
         </motion.p>
       </div>
     </motion.section>
-  );
+  )
 }

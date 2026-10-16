@@ -1,0 +1,1 @@
+ALTER TABLE "generated_sites" ALTER COLUMN "schema_version" SET DEFAULT 3;

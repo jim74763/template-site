@@ -1,12 +1,14 @@
-import * as motion from "motion/react-client";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import type { OrganicMarketData } from "@/lib/website-content/organic-market/types";
+import * as motion from 'motion/react-client'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import type { OrganicMarketData } from '@/lib/website-content/organic-market/types'
 
 export function Categories({
   categoriesSection,
+  isPreview = false,
 }: {
-  categoriesSection: OrganicMarketData["categoriesSection"];
+  categoriesSection: OrganicMarketData['categoriesSection']
+  isPreview?: boolean
 }) {
   return (
     <section className="py-20">
@@ -30,13 +32,15 @@ export function Categories({
               className="group cursor-pointer"
             >
               <div className="relative overflow-hidden rounded-2xl">
-                <Image
-                  width={category.width}
-                  height={category.height}
-                  src={category.image}
-                  alt={category.name}
-                  className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                {!isPreview && (
+                  <Image
+                    width={category.width}
+                    height={category.height}
+                    src={category.image}
+                    alt={category.name}
+                    className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                )}
                 <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h3 className="text-2xl font-bold mb-2">{category.name}</h3>
                   <p className="text-lg">{category.description}</p>
@@ -50,5 +54,5 @@ export function Categories({
         </div>
       </div>
     </section>
-  );
+  )
 }

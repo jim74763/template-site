@@ -21,7 +21,7 @@ import {
   Truck,
   Users,
   type LucideIcon,
-} from "lucide-react";
+} from 'lucide-react'
 
 export const iconMap = {
   Apple,
@@ -45,16 +45,16 @@ export const iconMap = {
   Store,
   Truck,
   Users,
-} satisfies Record<string, LucideIcon>;
+} satisfies Record<string, LucideIcon>
 
-export type IconName = keyof typeof iconMap;
+export type IconName = keyof typeof iconMap
 
 interface IconProps {
-  name: IconName;
-  className?: string;
+  name: IconName
+  className?: string
 }
 
 export function Icon({ name, className }: IconProps) {
-  const IconComponent = iconMap[name];
-  return <IconComponent className={className} />;
+  const IconComponent = iconMap[name]
+  return <IconComponent className={className} />
 }
