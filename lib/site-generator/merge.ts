@@ -7,6 +7,7 @@ export function mergeGenerated<T>(
   defaults: T,
   generated: unknown,
   key?: string,
+  parentKey?: string,
 ): T {
   if (key && OPTIONAL_KEYS.has(key) && generated === null) return null as T
 
@@ -27,6 +28,9 @@ export function mergeGenerated<T>(
   }
 
   if (Array.isArray(defaults)) {
+    // Hours have a variable row count. Preserve the supplied rows verbatim so
+    // schema validation can reject incomplete data without inventing hours.
+    if (key === 'rows' && parentKey === 'openingHours') return generated as T
     const items = Array.isArray(generated) ? generated : []
     return defaults.map((item, i) => mergeGenerated(item, items[i], key)) as T
   }
@@ -39,7 +43,7 @@ export function mergeGenerated<T>(
     return Object.fromEntries(
       Object.entries(defaults).map(([k, v]) => [
         k,
-        mergeGenerated(v, source[k], k),
+        mergeGenerated(v, source[k], k, key),
       ]),
     ) as T
   }

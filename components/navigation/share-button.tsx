@@ -12,6 +12,37 @@ import { useState } from 'react'
 
 export function ShareButton() {
   const [copy, setCopy] = useState(false)
+  const [error, setError] = useState('')
+
+  async function copyUrl() {
+    setCopy(false)
+    setError('')
+    try {
+      await navigator.clipboard.writeText(window.location.href)
+      setCopy(true)
+      setTimeout(() => setCopy(false), 2000)
+    } catch {
+      setError('Could not copy the link. Copy it from your address bar.')
+    }
+  }
+
+  async function shareUrl() {
+    setError('')
+    if (typeof navigator.share !== 'function') {
+      await copyUrl()
+      return
+    }
+
+    try {
+      await navigator.share({
+        title: document.title,
+        url: window.location.href,
+      })
+    } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') return
+      await copyUrl()
+    }
+  }
 
   return (
     <NavigationMenuItem>
@@ -24,10 +55,7 @@ export function ShareButton() {
             variant="ghost"
             onClick={async (e) => {
               e.preventDefault()
-              await navigator.share({
-                title: document.title,
-                url: window.location.href,
-              })
+              await shareUrl()
             }}
           >
             <Share size={14} />
@@ -35,13 +63,9 @@ export function ShareButton() {
           </Button>
           <Button
             variant="ghost"
-            onClick={(e) => {
+            onClick={async (e) => {
               e.preventDefault()
-              navigator.clipboard.writeText(window.location.href)
-              setCopy(true)
-              setTimeout(() => {
-                setCopy(false)
-              }, 2000)
+              await copyUrl()
             }}
           >
             <Link2 size={14} />
@@ -56,6 +80,11 @@ export function ShareButton() {
             </motion.span>
           </Button>
         </ul>
+        {error && (
+          <p role="alert" className="px-3 py-2 text-sm">
+            {error}
+          </p>
+        )}
       </NavigationMenuContent>
     </NavigationMenuItem>
   )
